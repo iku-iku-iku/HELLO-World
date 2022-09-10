@@ -14,7 +14,7 @@ void Camera::OnImGuiRender() {
     if (ImGui::SliderFloat3("View Translation", &m_ViewTranslate.x, -10.f, 10.f)) {
         m_ViewDirty = true;
     }
-    if (ImGui::SliderFloat3("View Rotation", &m_ViewRotation.x, -2.f, 2.f)) {
+    if (ImGui::SliderFloat3("View Rotation", &m_ViewRotation.x, -M_PI, M_PI)) {
         m_ViewDirty = true;
     }
 }

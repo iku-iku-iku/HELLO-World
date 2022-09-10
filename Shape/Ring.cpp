@@ -14,18 +14,20 @@ namespace {
 
 void Ring::OnImGuiRender() {
     Shape::OnImGuiRender();
+    ImGui::SliderFloat3("Ring Position", &m_Translation.x, -10.f, 10.f);
     ImGui::SliderFloat3("Ring Rotation", &m_Rotation.x, -M_PI, M_PI);
     ImGui::SliderInt("Ring Points Count", &m_RingPointsCnt, 3, m_MaxRingPointCnt);
     ImGui::SliderInt("Circle Points Count", &m_CirclePointsCnt, 3, m_MaxCirclePointCnt);
-    ImGui::SliderFloat("Circle Radius", &m_CircleRadius, 0.1f, 1.f);
-    ImGui::SliderFloat("Ring Radius", &m_RingRadius, 0.1f, 1.f);
+    ImGui::SliderFloat("Circle Radius", &m_CircleRadius, 0.f, 1.f);
+    ImGui::SliderFloat("Ring Radius", &m_RingRadius, 0.f, 1.f);
 }
 
 glm::mat4 Ring::GetModelMatrix() const {
     glm::mat4 model = glm::mat4(1.f);
-    model *= glm::rotate(glm::mat4(1.f), m_Rotation.x, glm::vec3(1.f, 0.f, 0.f));
-    model *= glm::rotate(glm::mat4(1.f), m_Rotation.y, glm::vec3(0.f, 1.f, 0.f));
+    model *= glm::translate(glm::mat4(1.f), m_Translation);
     model *= glm::rotate(glm::mat4(1.f), m_Rotation.z, glm::vec3(0.f, 0.f, 1.f));
+    model *= glm::rotate(glm::mat4(1.f), m_Rotation.y, glm::vec3(0.f, 1.f, 0.f));
+    model *= glm::rotate(glm::mat4(1.f), m_Rotation.x, glm::vec3(1.f, 0.f, 0.f));
     return model;
 }
 
@@ -50,6 +52,10 @@ void Ring::UpdateData() {
             m_RingVertexData.push_back(point.z);
             m_RingVertexData.push_back((float) ri / (float) (m_RingPointsCnt));
             m_RingVertexData.push_back((float) ci / (float) (m_CirclePointsCnt));
+            glm::vec3 norm = dir;
+            m_RingVertexData.push_back(norm.x);
+            m_RingVertexData.push_back(norm.y);
+            m_RingVertexData.push_back(norm.z);
 
             if (ci == 0 || ri == 0) continue;
 

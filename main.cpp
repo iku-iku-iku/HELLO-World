@@ -11,6 +11,7 @@
 #include "TestTexture2D.h"
 #include "TestPlanet.h"
 #include "TestRing.h"
+#include "TestLight.h"
 
 GLFWwindow *window;
 int main() {
@@ -55,6 +56,7 @@ int main() {
         test.RegisterTest<test::TestTexture2D>("Test Texture 2D");
         test.RegisterTest<test::TestPlanet>("Test Planet");
         test.RegisterTest<test::TestRing>("Test Ring");
+        test.RegisterTest<test::TestLight>("Test Light");
 
         float time = 0.f;
         while (!glfwWindowShouldClose(window)) {

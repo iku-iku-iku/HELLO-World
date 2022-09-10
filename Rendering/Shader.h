@@ -44,6 +44,12 @@ public:
     void SetUniformMat4f(const std::string &uniform_name, const glm::mat4 &mat);
 
     void SetUniform1i(const std::string &uniform_name, int i);
+
+    void SetUniform4fv(const std::string &uniform_name, float* data);
+
+    void SetUniform1f(const std::string &uniform_name, float data);
+
+    void SetUniform3fv(const std::string &uniform_name, float* data);
 };
 
 #endif //HELLO_SHADER_H

@@ -19,7 +19,7 @@ public:
     void SetData(class VertexBuffer &vb, class IndexBuffer &ib);
 
     unsigned int GetMaxBufferSize() const {
-        return (m_MaxRingPointCnt + 1) * (m_MaxCirclePointCnt + 1) * 5 * sizeof(float);
+        return (m_MaxRingPointCnt + 1) * (m_MaxCirclePointCnt + 1) * 8 * sizeof(float);
     }
 
     unsigned int GetMaxIndexCnt() const {
@@ -30,11 +30,13 @@ public:
         VertexBufferLayout layout;
         layout.Push<float>(3);
         layout.Push<float>(2);
+        layout.Push<float>(3);
         return layout;
     }
 
 private:
     glm::vec3 m_Rotation{};
+    glm::vec3 m_Translation{};
 
     float m_CircleRadius = .2f;
     float m_RingRadius = .6f;
