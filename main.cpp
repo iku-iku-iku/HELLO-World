@@ -3,18 +3,17 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
-#include "Renderer.h"
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
-#include "VertexBufferLayout.h"
-#include "VertexArray.h"
-#include "Shader.h"
-#include "Texture.h"
-#include ""
+#include "Rendering/Renderer.h"
+#include "imgui.h"
+#include "imgui_impl_glfw_gl3.h"
+#include "test/TestClearColor.h"
+#include "TestMenu.h"
+#include "TestTexture2D.h"
+#include "TestPlanet.h"
+#include "TestRing.h"
 
+GLFWwindow *window;
 int main() {
-    GLFWwindow *window;
-
     /* Initialize the library */
     if (!glfwInit())
         return -1;
@@ -40,65 +39,35 @@ int main() {
         std::cout << "glew init failed!" << std::endl;
     }
 
-
-    float positions[] = {
-            0.5f, 0.5f, 1.f, 1.f,
-            -0.5f, 0.5f, 0.f, 1.f,
-            -0.5f, -0.5f, 0.f, 0.f,
-            0.5f, -0.5f, 1.f, 0.f};
-
-    unsigned int indices[] = {
-            0, 1, 2,
-            2, 3, 0};
-
     GLCALL(glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA))
     GLCALL(glEnable(GL_BLEND))
-
+    glDisable(GL_CULL_FACE);
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
 
     {
-        VertexBuffer vb(positions, sizeof(positions));
+        ImGui::CreateContext();
+        ImGui_ImplGlfwGL3_Init(window, true);
+        ImGui::StyleColorsDark();
 
-        VertexBufferLayout layout;
-        layout.Push<float>(2);
-        layout.Push<float>(2);
+        test::TestMenu test;
+        test.RegisterTest<test::TestClearColor>("Test Clear Color");
+        test.RegisterTest<test::TestTexture2D>("Test Texture 2D");
+        test.RegisterTest<test::TestPlanet>("Test Planet");
+        test.RegisterTest<test::TestRing>("Test Ring");
 
-        VertexArray va;
-        va.AddBuffer(vb, layout);
-
-        IndexBuffer ib(indices, 6);
-
-        Shader shader("../shaders/basic.shader");
-
-        float r = 0.f;
-        float increment = 0.01f;
-
-        Texture texture("../texture/OK.png");
-        texture.Bind();
-        shader.SetUniform1i("u_Texture", 0);
-
-        va.UnBind();
-        shader.UnBind();
-        ib.UnBind();
-        vb.UnBind();
-
-        Renderer renderer;
-
-        //  Loop until the user closes the window */
+        float time = 0.f;
         while (!glfwWindowShouldClose(window)) {
-            /* Render here */
-            renderer.Clear();
+            time += 0.01f;
+            glfwPollEvents();
 
-            if (r > 1.f && increment > 0 || r < 0.f && increment < 0) {
-                increment = -increment;
-            }
-            r += increment;
+            test.OnUpdate(0.f);
+            test.OnRender(time);
 
-            shader.Bind();
-//            shader.SetUniform4f("u_Color", r, 0.f, 1.f, 1.f);
-
-            /* draw call */
-            renderer.Draw(va, ib, shader);
-
+            ImGui_ImplGlfwGL3_NewFrame();
+            test.OnImGuiRender();
+            ImGui::Render();
+            ImGui_ImplGlfwGL3_RenderDrawData(ImGui::GetDrawData());
             /* Swap front and back buffers */
             glfwSwapBuffers(window);
 
@@ -107,7 +76,11 @@ int main() {
         }
     }
 
+    // Cleanup
+    ImGui_ImplGlfwGL3_Shutdown();
+    ImGui::DestroyContext();
 
+    glfwDestroyWindow(window);
     glfwTerminate();
 
     return 0;

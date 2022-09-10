@@ -2,7 +2,12 @@ cmake_minimum_required(VERSION 3.22.1)
 
 project(HELLO)
 
-add_executable(${PROJECT_NAME} main.cpp Renderer.cpp IndexBuffer.cpp VertexBuffer.cpp VertexArray.cpp Shader.cpp vendor/stb_image/stb_image.cpp Texture.cpp Texture.h)
+file(GLOB_RECURSE IMGUI vendor/imgui/*.cpp)
+file(GLOB_RECURSE RENDER Rendering/*.cpp)
+file(GLOB_RECURSE TEST test/*.cpp)
+file(GLOB_RECURSE SHAPE Shape/*.cpp)
+
+add_executable(${PROJECT_NAME} main.cpp ${RENDER} ${IMGUI} ${TEST} vendor/stb_image/stb_image.cpp ${SHAPE} Rendering/RenderUtils.h)
 
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
@@ -33,6 +38,12 @@ find_package(OpenGL REQUIRED)
 # find_package(GLEW REQUIRED)
 # include_directories(${GLEW_INCLUDE_DIRS})
 include_directories("external/glm")
+include_directories("vendor/imgui")
+include_directories("vendor/stb_image")
+include_directories("test")
+include_directories(".")
+include_directories("Shape")
+include_directories("Rendering")
 # link_libraries(${GLEW_LIBRARIES})
 
 # target_include_directories(${PROJECT_NAME} 
@@ -43,5 +54,5 @@ include_directories("external/glm")
 #     PUBLIC external/glfw/src
 # )
 
-# include_directories(${OPENGL_INCLUDE_DIRS})
+ include_directories(${OPENGL_INCLUDE_DIRS})
 target_link_libraries(${PROJECT_NAME} glfw GLEW ${OPENGL_LIBRARIES} )
