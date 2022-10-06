@@ -21,11 +21,11 @@ public:
     void SetData(class VertexBuffer &vb, class IndexBuffer &ib);
 
     unsigned int GetMaxBufferSize() const {
-        return 4 * 8 * sizeof(float);
+        return VERT_COUNT * VERTEX_ATTRIBUTE_COUNT * sizeof(float);
     }
 
     unsigned int GetMaxIndexCnt() const {
-        return 6;
+        return INDEX_COUNT;
     }
 
     VertexBufferLayout GetLayout() const {
@@ -43,8 +43,12 @@ private:
     float m_Scale1 = 5.f;
     float m_Scale2 = 5.f;
 
-    float m_PlaneVertexData[8 * 4];
-    unsigned int m_PlaneIndices[6];
+    static constexpr unsigned int VERTEX_ATTRIBUTE_COUNT = 8;
+    static constexpr unsigned int VERT_COUNT = 8;
+    static constexpr unsigned int INDEX_COUNT = 12;
+
+    float m_PlaneVertexData[VERTEX_ATTRIBUTE_COUNT * VERT_COUNT];
+    unsigned int m_PlaneIndices[INDEX_COUNT];
 };
 
 #endif //HELLO_PLANE_H

@@ -33,6 +33,7 @@ namespace Editor {
         SET_KEY(D)
         SET_KEY(Q)
         SET_KEY(E)
+        SET_KEY(ESCAPE)
 
         Key = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
         switch (Key) {

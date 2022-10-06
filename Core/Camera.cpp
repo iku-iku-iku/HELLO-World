@@ -5,9 +5,9 @@
 #include "Camera.h"
 #include "glm/gtc/matrix_transform.hpp"
 #include "imgui.h"
-#include "GLFW/glfw3.h"
+#include "Core/Window.h"
+#include "Core/World.h"
 
-extern GLFWwindow *window;
 namespace core {
     void Camera::OnImGuiRender() {
         if (ImGui::SliderFloat3("View Translation", &m_ViewTranslation.x, -10.f, 10.f)) {
@@ -26,8 +26,7 @@ namespace core {
 
     Camera::Camera() {
         int width, height;
-        glfwGetFramebufferSize(window, &width, &height);
-
+        world.GetWindow()->GetFrameBufferSize(width, height);
         SetProjection(1.3f, (float) width / (float) height, .1f, 100.f);
         SetTranslation(0.f, 1.f, 5.f);
     }

@@ -9,7 +9,7 @@
 #include <unordered_set>
 #include <Core/Event.h>
 
-
+class GLFWwindow;
 namespace Editor {
     struct KeyStatus {
         typedef unsigned char uint8;
@@ -21,6 +21,7 @@ namespace Editor {
         uint8 E: 1;
         uint8 M_L: 1;
         uint8 M_R: 1;
+        uint8 ESCAPE: 1;
     };
 
     struct Cursor {
@@ -60,11 +61,11 @@ namespace Editor {
 }
 namespace Editor {
 
-    void ProcessInput(class GLFWwindow *window);
+    void ProcessInput(GLFWwindow *window);
 
-    void GetKey(class GLFWwindow *window);
+    void GetKey(GLFWwindow *window);
 
-    void GetCursor(class GLFWwindow *window);
+    void GetCursor(GLFWwindow *window);
 
     Input::InputEvent &OnInput();
 }

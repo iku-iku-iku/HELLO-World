@@ -6,9 +6,7 @@
 #include "Rendering/Renderer.h"
 #include "stb_image.h"
 #include <iostream>
-#include "GLFW/glfw3.h"
-
-extern GLFWwindow *window;
+#include "Core/World.h"
 
 void Texture::Bind(unsigned int slot) {
     m_Slot = slot;
@@ -58,7 +56,7 @@ std::unique_ptr<Texture> Texture::DepthTexture() {
     auto p = std::make_unique<Texture>();
 
     int screenSizeX, screenSizeY;
-    glfwGetFramebufferSize(window, &screenSizeX, &screenSizeY);
+    world.GetWindow()->GetFrameBufferSize(screenSizeX, screenSizeY);
     glTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, screenSizeX, screenSizeY, 0, GL_DEPTH_COMPONENT, GL_FLOAT, NULL);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);

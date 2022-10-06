@@ -4,6 +4,7 @@
 
 #include "TestShadow.h"
 #include "imgui.h"
+#include <GLFW/glfw3.h>
 
 namespace {
     float globalAmbient[4] = {0.7f, 0.7f, 0.7f, 1.0f};

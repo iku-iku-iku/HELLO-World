@@ -3,11 +3,13 @@
 //
 
 #include <iostream>
+#include <stdlib.h>
+#include "Core/Log.h"
 #include "Player.h"
 
 core::Player::~Player() {
     if (Editor::OnInput().RemoveListener(InputKey)) {
-        std::cout << "Remove Successfully" << std::endl;
+        LOG("Remove Successfully")
     }
 }
 
@@ -43,7 +45,10 @@ void core::Player::InputKeyHandler(const Editor::InputContext &inputContext) {
     if (keyStatus.E) {
         m_Camera->AddTranslation(0, delta, 0);
     }
-    if (keyStatus.M_R) {
+    if (keyStatus.ESCAPE) {
+        exit(0);
+    }
+    // if (keyStatus.M_R) {
         if (!m_IsMLPressing) {
             m_IsMLPressing = true;
             m_MLPressBeginCursorX = cursor.xPos;
@@ -57,7 +62,7 @@ void core::Player::InputKeyHandler(const Editor::InputContext &inputContext) {
             m_Camera->GetRotation().SetPitch(deltaCursorY * m_CameraRotateSpeed + m_MLPressBeginPitch);
             m_Camera->GetRotation().SetYaw(deltaCursorX * m_CameraRotateSpeed + m_MLPressBeginYaw);
         }
-    } else {
-        m_IsMLPressing = false;
-    }
+    // } else {
+    //     m_IsMLPressing = false;
+    // }
 }

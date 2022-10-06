@@ -34,13 +34,20 @@ void Plane::SetData(VertexBuffer &vb, IndexBuffer &ib) {
 }
 
 Plane::Plane() : m_PlaneVertexData{
-        0.5f, 0.f, 0.5f, 1.f, 0.f, 0.f, 1.f, 0.f,
-        -0.5f, 0.f, 0.5f, 0.f, 0.f, 0.f, 1.f, 0.f,
-        0.5f, 0.f, -0.5f, 1.f, 1.f, 0.f, 1.f, 0.f,
-        -0.5f, 0.f, -0.5f, 0.f, 1.f, 0.f, 1.f, 0.f,
+    //  x     y    z     u    v    normal xyz
+        0.5f, 0.001f, 0.5f, 1.f, 0.f, 0.f, 1.f, 0.f,
+        -0.5f, 0.001f, 0.5f, 0.f, 0.f, 0.f, 1.f, 0.f,
+        0.5f, 0.001f, -0.5f, 1.f, 1.f, 0.f, 1.f, 0.f,
+        -0.5f, 0.001f, -0.5f, 0.f, 1.f, 0.f, 1.f, 0.f,
+        0.5f, 0.f, 0.5f, 1.f, 0.f, 0.f, -1.f, 0.f,
+        -0.5f, 0.f, 0.5f, 0.f, 0.f, 0.f, -1.f, 0.f,
+        0.5f, 0.f, -0.5f, 1.f, 1.f, 0.f, -1.f, 0.f,
+        -0.5f, 0.f, -0.5f, 0.f, 1.f, 0.f, -1.f, 0.f,
 }, m_PlaneIndices{
         0, 1, 2,
         3, 2, 1,
+        3, 4, 5,
+        6, 5, 4,
 } {
 
 }
