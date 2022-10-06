@@ -53,7 +53,7 @@ test::TestTexture2D::TestTexture2D() {
     layout.Push<float>(2);
 
     m_VertexArray = std::make_unique<VertexArray>();
-    m_VertexArray->AddBuffer(*m_VertexBuffer, layout);
+    m_VertexArray->SetBuffer(*m_VertexBuffer, layout);
 
     m_IndexBuffer = std::make_unique<IndexBuffer>(indices, 6);
 

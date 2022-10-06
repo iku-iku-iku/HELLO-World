@@ -64,7 +64,7 @@ namespace glm
 			vec<2, V2, Q> const& v2,
 			vec<2, V3, Q> const& v3);
 
-		// -- Matrix conversions --
+		// -- Matrix4f conversions --
 
 		template<typename U, qualifier P>
 		GLM_FUNC_DECL GLM_EXPLICIT GLM_CONSTEXPR mat(mat<3, 2, U, P> const& m);

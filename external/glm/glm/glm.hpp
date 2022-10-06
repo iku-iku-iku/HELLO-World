@@ -1,14 +1,14 @@
 /// @ref core
 /// @file glm/glm.hpp
 ///
-/// @defgroup core Core features
+/// @defgroup core core features
 ///
 /// @brief Features that implement in C++ the GLSL specification as closely as possible.
 ///
 /// The GLM core consists of C++ types that mirror GLSL types and
 /// C++ functions that mirror the GLSL functions.
 ///
-/// The best documentation for GLM Core is the current GLSL specification,
+/// The best documentation for GLM core is the current GLSL specification,
 /// <a href="http://www.opengl.org/registry/doc/GLSLangSpec.4.20.8.clean.pdf">version 4.2
 /// (pdf file)</a>.
 ///
@@ -38,17 +38,17 @@
 /// @ingroup core
 ///
 ///
-/// @defgroup core_matrix Matrix types
+/// @defgroup core_matrix Matrix4f types
 ///
-/// Matrix types of with C columns and R rows where C and R are values between 2 to 4 included.
+/// Matrix4f types of with C columns and R rows where C and R are values between 2 to 4 included.
 /// These types have exhaustive sets of operators.
 ///
 /// @ingroup core
 ///
 ///
-/// @defgroup core_matrix_precision Matrix types with precision qualifiers
+/// @defgroup core_matrix_precision Matrix4f types with precision qualifiers
 ///
-/// @brief Matrix types with precision qualifiers which may result in various precision in term of ULPs
+/// @brief Matrix4f types with precision qualifiers which may result in various precision in term of ULPs
 ///
 /// GLSL allows defining qualifiers for particular variables.
 /// With OpenGL's GLSL, these qualifiers have no effect; they are there for compatibility,

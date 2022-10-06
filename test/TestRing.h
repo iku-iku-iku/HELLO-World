@@ -16,7 +16,7 @@
 #include "Rendering/Shader.h"
 #include "Rendering/Texture.h"
 #include "Rendering/Renderer.h"
-#include "Rendering/Camera.h"
+#include "Core/Camera.h"
 #include "Ring.h"
 
 namespace test {
@@ -40,7 +40,7 @@ namespace test {
         std::unique_ptr<Texture> m_Texture;
         std::unique_ptr<Renderer> m_Renderer;
 
-        Camera m_Camera;
+        core::Camera m_Camera;
         Ring m_Ring;
     };
 }

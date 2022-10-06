@@ -10,11 +10,19 @@
 
 namespace RenderUtils {
 
+    inline glm::mat4 GetRotationInvMatrix(glm::vec3 rotation) {
+        glm::mat4 viewRot = glm::mat4(1.f);
+        viewRot *= glm::transpose(glm::rotate(glm::mat4(1.f), rotation.x, glm::vec3(1.f, 0.f, 0.f)));
+        viewRot *= glm::transpose(glm::rotate(glm::mat4(1.f), rotation.y, glm::vec3(0.f, 1.f, 0.f)));
+        viewRot *= glm::transpose(glm::rotate(glm::mat4(1.f), rotation.z, glm::vec3(0.f, 0.f, 1.f)));
+        return viewRot;
+    }
+
     inline glm::mat4 GetRotationMatrix(glm::vec3 rotation) {
         glm::mat4 viewRot = glm::mat4(1.f);
-        viewRot *= glm::rotate(glm::mat4(1.f), rotation.x, glm::vec3(1.f, 0.f, 0.f));
-        viewRot *= glm::rotate(glm::mat4(1.f), rotation.y, glm::vec3(0.f, 1.f, 0.f));
         viewRot *= glm::rotate(glm::mat4(1.f), rotation.z, glm::vec3(0.f, 0.f, 1.f));
+        viewRot *= glm::rotate(glm::mat4(1.f), rotation.y, glm::vec3(0.f, 1.f, 0.f));
+        viewRot *= glm::rotate(glm::mat4(1.f), rotation.x, glm::vec3(1.f, 0.f, 0.f));
         return viewRot;
     }
 }

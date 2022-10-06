@@ -102,7 +102,7 @@ test::TestPlanet::TestPlanet() {
     layout.Push<float>(3);
 
     m_VertexArray = std::make_unique<VertexArray>();
-    m_VertexArray->AddBuffer(*m_VertexBuffer, layout);
+    m_VertexArray->SetBuffer(*m_VertexBuffer, layout);
 
     m_IndexBuffer = std::make_unique<IndexBuffer>(indices, sizeof(indices) / sizeof(indices[0]));
 

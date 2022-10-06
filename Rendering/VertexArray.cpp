@@ -19,7 +19,7 @@ void VertexArray::UnBind() {
     GLCALL(glBindVertexArray(0))
 }
 
-void VertexArray::AddBuffer(const VertexBuffer &vb, const VertexBufferLayout &layout) {
+void VertexArray::SetBuffer(const VertexBuffer &vb, const VertexBufferLayout &layout) {
     Bind();
     vb.Bind();
 

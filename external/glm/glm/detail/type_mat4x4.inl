@@ -169,7 +169,7 @@ namespace glm
 #		endif
 	}
 
-	// -- Matrix conversions --
+	// -- Matrix4f conversions --
 
 	template<typename T, qualifier Q>
 	GLM_FUNC_QUALIFIER GLM_CONSTEXPR mat<4, 4, T, Q>::mat(mat<2, 2, T, Q> const& m)

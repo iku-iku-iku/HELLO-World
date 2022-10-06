@@ -3,6 +3,8 @@
 #include <iostream>
 #include <fstream>
 #include <sstream>
+#include <Core/Player.h>
+#include "Editor/Input.h"
 #include "Rendering/Renderer.h"
 #include "imgui.h"
 #include "imgui_impl_glfw_gl3.h"
@@ -12,6 +14,7 @@
 #include "TestPlanet.h"
 #include "TestRing.h"
 #include "TestLight.h"
+#include "TestShadow.h"
 
 GLFWwindow *window;
 int main() {
@@ -57,10 +60,13 @@ int main() {
         test.RegisterTest<test::TestPlanet>("Test Planet");
         test.RegisterTest<test::TestRing>("Test Ring");
         test.RegisterTest<test::TestLight>("Test Light");
+        test.RegisterTest<test::TestShadow>("Test Shadow");
 
         float time = 0.f;
+
         while (!glfwWindowShouldClose(window)) {
             time += 0.01f;
+            Editor::ProcessInput(window);
             glfwPollEvents();
 
             test.OnUpdate(0.f);

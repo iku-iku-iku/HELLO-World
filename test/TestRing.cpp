@@ -44,7 +44,7 @@ test::TestRing::TestRing() {
     m_IndexBuffer->Allocate(m_Ring.GetMaxIndexCnt());
 
     m_VertexArray = std::make_unique<VertexArray>();
-    m_VertexArray->AddBuffer(*m_VertexBuffer, m_Ring.GetLayout());
+    m_VertexArray->SetBuffer(*m_VertexBuffer, m_Ring.GetLayout());
 
     m_Shader = std::make_unique<Shader>("../shaders/test_ring.shader");
 

@@ -43,9 +43,9 @@
 + [3.3. Vector types](#section3_3)
 + [3.4. Vector types with precision qualifiers](#section3_4)
 + [3.5. Vector functions](#section3_5)
-+ [3.6. Matrix types](#section3_6)
-+ [3.7. Matrix types with precision qualifiers](#section3_7)
-+ [3.8. Matrix functions](#section3_8)
++ [3.6. Matrix4f types](#section3_6)
++ [3.7. Matrix4f types with precision qualifiers](#section3_7)
++ [3.8. Matrix4f functions](#section3_8)
 + [3.9. Quaternion types](#section3_9)
 + [3.10. Quaternion types with precision qualifiers](#section3_10)
 + [3.11. Quaternion functions](#section3_11)
@@ -92,7 +92,7 @@
 + [7.13. Constant expressions support](#section7_13)
 + [8. Code samples](#section8)
 + [8.1. Compute a triangle normal](#section8_1)
-+ [8.2. Matrix transform](#section8_2)
++ [8.2. Matrix4f transform](#section8_2)
 + [8.3. Vector types](#section8_3)
 + [8.4. Lighting](#section8_4)
 + [9. Contributing to GLM](#section9)
@@ -1077,7 +1077,7 @@ bool test_ulp(glm::vec4 const& x)
 
 Include `<glm/ext/vector_ulp.hpp>` to use these features.
 
-### <a name="section3_6"></a> 3.6. Matrix types
+### <a name="section3_6"></a> 3.6. Matrix4f types
 
 #### 3.6.1. GLM_EXT_matrix_float2x2
 
@@ -1187,7 +1187,7 @@ This extension exposes double-precision floating point vector with 4 columns by 
 
 Include `<glm/ext/matrix_double4x4.hpp>` to use these features.
 
-### <a name="section3_7"></a> 3.7. Matrix types with precision qualifiers
+### <a name="section3_7"></a> 3.7. Matrix4f types with precision qualifiers
 
 #### 3.7.1. GLM_EXT_matrix_float2x2_precision
 
@@ -1297,7 +1297,7 @@ This extension exposes double-precision floating point vector with 4 columns by 
 
 Include `<glm/ext/matrix_double4x4_precision.hpp>` to use these features.
 
-### <a name="section3_8"></a> 3.8. Matrix functions
+### <a name="section3_8"></a> 3.8. Matrix4f functions
 
 #### 3.8.1. GLM_EXT_matrix_relational
 
@@ -1506,7 +1506,7 @@ Additional matrix inverse functions.
 
 ### <a name="section4_9"></a> 4.9. GLM\_GTC\_matrix\_transform
 
-Matrix transformation functions that follow the OpenGL fixed-function conventions.
+Matrix4f transformation functions that follow the OpenGL fixed-function conventions.
 
 For example, the `lookAt` function generates a transformation matrix that projects world coordinates into eye coordinates suitable for projection matrices (e.g. `perspective`, `ortho`). See the OpenGL compatibility specifications for more information about the layout of these generated matrices.
 
@@ -1627,7 +1627,7 @@ Vector and matrix types with defined precisions, e.g. `i8vec4`, which is a 4D ve
 
 Facilitate interactions between pointers to basic types (e.g. `float*`) and GLM types (e.g. `mat4`).
 
-This extension defines an overloaded function, `glm::value_ptr`, which returns a pointer to the memory layout of any GLM vector or matrix (`vec3`, `mat4`, etc.). Matrix types store their values in column-major order. This is useful for uploading data to matrices or for copying data to buffer objects.
+This extension defines an overloaded function, `glm::value_ptr`, which returns a pointer to the memory layout of any GLM vector or matrix (`vec3`, `mat4`, etc.). Matrix4f types store their values in column-major order. This is useful for uploading data to matrices or for copying data to buffer objects.
 
 ```cpp
 // GLM_GTC_type_ptr provides a safe solution:
@@ -1963,7 +1963,7 @@ glm::vec3 computeNormal(glm::vec3 const& a, glm::vec3 const& b, glm::vec3 const&
 }
 ```
 
-### <a name="section8_2"></a> 8.2. Matrix transform
+### <a name="section8_2"></a> 8.2. Matrix4f transform
 
 ```cpp
 #include <glm/glm.hpp> // vec3, vec4, ivec4, mat4

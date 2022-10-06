@@ -16,7 +16,7 @@
 #include "Rendering/Shader.h"
 #include "Rendering/Texture.h"
 #include "Rendering/Renderer.h"
-#include "Rendering/Camera.h"
+#include "Core/Camera.h"
 
 namespace test {
     class TestPlanet  : public Test {
@@ -36,7 +36,7 @@ namespace test {
         std::unique_ptr<IndexBuffer> m_IndexBuffer;
         std::unique_ptr<Shader> m_Shader;
         std::unique_ptr<Renderer> m_Renderer;
-        Camera m_Camera;
+        core::Camera m_Camera;
     };
 }
 

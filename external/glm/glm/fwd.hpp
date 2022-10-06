@@ -505,7 +505,7 @@ namespace glm
 	typedef vec<3, f64, defaultp>		f64vec3;
 	typedef vec<4, f64, defaultp>		f64vec4;
 
-	// Matrix NxN
+	// Matrix4f NxN
 
 	typedef mat<2, 2, f32, lowp>		lowp_mat2;
 	typedef mat<3, 3, f32, lowp>		lowp_mat3;
@@ -587,7 +587,7 @@ namespace glm
 	typedef mat<3, 3, f64, defaultp>	f64mat3;
 	typedef mat<4, 4, f64, defaultp>	f64mat4;
 
-	// Matrix MxN
+	// Matrix4f MxN
 
 	typedef mat<2, 2, f32, lowp>		lowp_mat2x2;
 	typedef mat<2, 3, f32, lowp>		lowp_mat2x3;

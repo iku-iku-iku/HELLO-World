@@ -105,7 +105,7 @@ namespace glm
 #		endif
 	}
 
-	// -- Matrix conversions --
+	// -- Matrix4f conversions --
 
 	template<typename T, qualifier Q>
 	template<typename U, qualifier P>
