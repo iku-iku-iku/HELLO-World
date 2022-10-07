@@ -2,12 +2,27 @@
 // Created by code4love on 2022/9/10.
 //
 
-#ifndef HELLO_SHAPE_H
-#define HELLO_SHAPE_H
+#pragma once
 
-class Shape {
+#include "glm/glm.hpp"
+#include "MeshData.h"
+#include "RenderingHeaders.h"
+
+class Shape
+{
 public:
-    virtual void OnImGuiRender() {}
-};
+    const MeshData &GetData() const { return m_Data; }
+    glm::mat4 GetModelMatrix() const;
 
-#endif //HELLO_SHAPE_H
+    virtual void SetData(class VertexBuffer &vb, class IndexBuffer &ib) = 0;
+    virtual ~Shape() = default;
+
+protected:
+    MeshData m_Data;
+
+    glm::vec3 m_Rotation{};
+
+    glm::vec3 m_Translation{};
+
+    glm::vec3 m_Scale{1.f, 1.f, 1.f};
+};

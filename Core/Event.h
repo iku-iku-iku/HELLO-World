@@ -46,9 +46,9 @@ namespace core {
         void AddListener(const Listener_T &listener) { m_Listeners.push_back(listener); }
 
         bool RemoveListener(const Listener_T &listener) {
-            int origin = m_Listeners.size();
-            int after = std::remove(m_Listeners.begin(), m_Listeners.end(), listener) - m_Listeners.begin();
-            return origin > after;
+            int originSize = m_Listeners.size();
+            int afterSize = std::remove(m_Listeners.begin(), m_Listeners.end(), listener) - m_Listeners.begin();
+            return originSize > afterSize;
         }
 
         void Broadcast(const ArgT &keyStatus) {

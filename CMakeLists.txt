@@ -4,13 +4,12 @@ project(HELLO)
 
 file(GLOB_RECURSE IMGUI vendor/imgui/*.cpp)
 file(GLOB_RECURSE RENDER Rendering/*.cpp)
-file(GLOB_RECURSE TEST test/*.cpp)
 file(GLOB_RECURSE SHAPE Shape/*.cpp)
 file(GLOB_RECURSE Editor Editor/*.cpp)
 file(GLOB_RECURSE Core Core/*.cpp)
 file(GLOB_RECURSE Lib Lib/*.cpp)
 
-add_executable(${PROJECT_NAME} main.cpp ${RENDER} ${IMGUI} ${TEST} vendor/stb_image/stb_image.cpp ${SHAPE} ${Editor} ${Core} ${Lib})
+add_executable(${PROJECT_NAME} main.cpp ${RENDER} ${IMGUI} vendor/stb_image/stb_image.cpp ${SHAPE} ${Editor} ${Core} ${Lib})
 
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")

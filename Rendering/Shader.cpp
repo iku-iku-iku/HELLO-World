@@ -97,6 +97,8 @@ void Shader::SetUniform4f(const std::string &uniform_name, float r, float g, flo
 }
 
 int Shader::GetUniformLocation(const std::string &uniform_name) const {
+    Bind();
+
     if (uniform_location_cache.find(uniform_name) != uniform_location_cache.end()) {
         return uniform_location_cache[uniform_name];
     }

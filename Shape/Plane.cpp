@@ -8,33 +8,9 @@
 #include "IndexBuffer.h"
 #include "VertexBuffer.h"
 
-void Plane::OnImGuiRender() {
-    Shape::OnImGuiRender();
-    ImGui::SliderFloat3("Plane Position", &m_Translation.x, -10.f, 10.f);
-    ImGui::SliderFloat3("Plane Rotation", &m_Rotation.x, -M_PI, M_PI);
-
-    ImGui::SliderFloat("Scale X", &m_Scale1, 0.f, 10.f);
-    ImGui::SliderFloat("Scale Y", &m_Scale2, 0.f, 10.f);
-}
-
-glm::mat4 Plane::GetModelMatrix() const {
-    glm::mat4 model = glm::mat4(1.f);
-    model *= glm::translate(glm::mat4(1.f), m_Translation);
-    model *= glm::rotate(glm::mat4(1.f), m_Rotation.z, glm::vec3(0.f, 0.f, 1.f));
-    model *= glm::rotate(glm::mat4(1.f), m_Rotation.y, glm::vec3(0.f, 1.f, 0.f));
-    model *= glm::rotate(glm::mat4(1.f), m_Rotation.x, glm::vec3(1.f, 0.f, 0.f));
-    model *= glm::scale(glm::mat4(1.f), glm::vec3(m_Scale1, 1.f, m_Scale2));
-    return model;
-}
-
-
-void Plane::SetData(VertexBuffer &vb, IndexBuffer &ib) {
-    vb.SetData(m_PlaneVertexData, sizeof(m_PlaneVertexData));
-    ib.SetData(m_PlaneIndices, sizeof(m_PlaneIndices) / sizeof(m_PlaneIndices[0]));
-}
-
-Plane::Plane() : m_PlaneVertexData{
-    //  x     y    z     u    v    normal xyz
+namespace {
+    float VertexData[] = {
+        //  x     y    z     u    v    normal xyz
         0.5f, 0.001f, 0.5f, 1.f, 0.f, 0.f, 1.f, 0.f,
         -0.5f, 0.001f, 0.5f, 0.f, 0.f, 0.f, 1.f, 0.f,
         0.5f, 0.001f, -0.5f, 1.f, 1.f, 0.f, 1.f, 0.f,
@@ -43,11 +19,27 @@ Plane::Plane() : m_PlaneVertexData{
         -0.5f, 0.f, 0.5f, 0.f, 0.f, 0.f, -1.f, 0.f,
         0.5f, 0.f, -0.5f, 1.f, 1.f, 0.f, -1.f, 0.f,
         -0.5f, 0.f, -0.5f, 0.f, 1.f, 0.f, -1.f, 0.f,
-}, m_PlaneIndices{
+    };
+    unsigned int Indices[] = {
         0, 1, 2,
         3, 2, 1,
-        3, 4, 5,
-        6, 5, 4,
-} {
+        4, 5, 6,
+        7, 6, 5,
+    };
+}
 
+void Plane::SetData(VertexBuffer &vb, IndexBuffer &ib) {
+    vb.SetData(m_Data.VertexData, m_Data.VertexDataSize);
+    ib.SetData(m_Data.IndexData, m_Data.IndexCount);
+}
+
+Plane::Plane() {
+    m_Data.IndexData = Indices;
+    m_Data.IndexCount = sizeof(Indices) / sizeof(Indices[0]);
+    m_Data.VertexData = VertexData;
+    m_Data.VertexDataSize = sizeof(VertexData);
+
+    m_Scale.x = 5.f;
+    m_Scale.z = 5.f;
+    m_Translation.y = -2.f;
 }

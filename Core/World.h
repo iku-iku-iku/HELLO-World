@@ -4,20 +4,14 @@
 
 #pragma once
 
+#include "WorldRenderer.h"
 #include <vector>
 #include <memory>
 #include "Camera.h"
 #include "Player.h"
 #include "Core/Window.h"
-#include "Shape/Ring.h"
-#include "Shape/Plane.h"
-#include "Rendering/Renderer.h"
-#include "Rendering/FrameBuffer.h"
-#include "Rendering/Texture.h"
-#include "Rendering/VertexBuffer.h"
-#include "Rendering/Shader.h"
-#include "Rendering/IndexBuffer.h"
-#include "Rendering/VertexArray.h"
+#include "RenderingHeaders.h"
+#include "Shape.h"
 
 
 
@@ -38,6 +32,9 @@ namespace core
 
         void Update();
 
+        const std::vector<std::unique_ptr<Shape>>&
+        GetShapes() const {return m_ShapeVec;}
+
     private:
         std::vector<std::unique_ptr<Camera>> m_Cameras;
 
@@ -52,16 +49,10 @@ namespace core
         void OnRender();
 
         std::unique_ptr<Window> m_Window;
-        std::unique_ptr<FrameBuffer> m_FrameBuffer;
-        std::unique_ptr<VertexArray> m_VertexArray;
-        std::unique_ptr<VertexBuffer> m_VertexBuffer;
-        std::unique_ptr<IndexBuffer> m_IndexBuffer;
-        std::unique_ptr<Shader> m_Shader1;
-        std::unique_ptr<Shader> m_Shader2;
-        std::unique_ptr<Texture> m_DepthMap;
-        std::unique_ptr<Renderer> m_Renderer;
-        Ring m_Ring;
-        Plane m_Plane;
+
+        std::unique_ptr<WorldRenderer> m_WorldRenderer;
+
+        std::vector<std::unique_ptr<Shape>> m_ShapeVec;
     };
 }
 
