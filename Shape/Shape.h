@@ -6,7 +6,6 @@
 
 #include "glm/glm.hpp"
 #include "MeshData.h"
-#include "RenderingHeaders.h"
 
 class Shape
 {
@@ -14,8 +13,9 @@ public:
     const MeshData &GetData() const { return m_Data; }
     glm::mat4 GetModelMatrix() const;
 
-    virtual void SetData(class VertexBuffer &vb, class IndexBuffer &ib) = 0;
+    void SetData(class VertexBuffer &vb, class IndexBuffer &ib);
     virtual ~Shape() = default;
+    virtual void UpdateData() {}
 
 protected:
     MeshData m_Data;

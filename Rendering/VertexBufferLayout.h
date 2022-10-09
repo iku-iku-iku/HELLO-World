@@ -1,6 +1,4 @@
-// #pragma once
-#ifndef __VERTEXBUFFERLAYOUR__H_
-#define __VERTEXBUFFERLAYOUR__H_
+#pragma once
 
 #include <vector>
 #include <GL/glew.h>
@@ -55,5 +53,3 @@ inline void VertexBufferLayout::Push<float>(unsigned int count)
     m_Elements.push_back({GL_FLOAT, count, false});
     m_Stride += count * VertexBufferElement::GetTypeSize(GL_FLOAT);
 }
-
-#endif

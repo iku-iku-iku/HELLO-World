@@ -15,10 +15,17 @@ namespace core
 
         bool IsValid;
 
-        void GetFrameBufferSize(int& width, int& height);
+        void GetFrameBufferSize(int& width, int& height) const;
+
+        void GetPrimaryMonitorSize(int& width, int& height) const;
+
+        float GetWidthHeightRatio() const;
     private:
         GLFWwindow *m_Window;
 
         void Init();
+
+        const int Width = 840;
+        const int Height = 580;
     };
 } // namespace core

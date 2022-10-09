@@ -14,13 +14,6 @@ class Plane : public Shape
 {
 public:
     Plane();
-
-    void SetData(class VertexBuffer &vb, class IndexBuffer &ib);
-
-private:
-    static constexpr unsigned int VERTEX_ATTRIBUTE_COUNT = 8;
-    static constexpr unsigned int VERT_COUNT = 8;
-    static constexpr unsigned int INDEX_COUNT = 12;
 };
 
 #endif // HELLO_PLANE_H

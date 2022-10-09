@@ -57,6 +57,9 @@ void main()
 #shader fragment
 #version 330 core
 
+#define SHADOW_BIAS 0.001
+#define FILTER_SIZE 7
+
 struct Light
 {
     vec4 ambient;
@@ -92,6 +95,31 @@ in vec2 v_TexCoord;
 in vec4 shadowCoord;
 
 out vec4 fragColor;
+
+float sampleShadowMap(vec2 xy, float z) {
+    float shadowDepth = texture(shTex, xy).r;
+    return z - SHADOW_BIAS > shadowDepth ? 0.0 : 1.0;
+}
+
+float pcfVisibility() {
+    float shadowFactor = 0;
+    vec3 projCoord = shadowCoord.xyz / shadowCoord.w;
+    projCoord = projCoord * 0.5 + 0.5;
+    int filterSize = FILTER_SIZE;
+    int sampleCount = 0;
+    vec2 texelSize = 1.0 / textureSize(shTex, 0);
+    for (int i = - filterSize / 2; i < filterSize / 2; ++i) {
+        for (int j = - filterSize / 2; j < filterSize / 2; ++j) {
+            vec2 samplePoint = projCoord.xy + vec2(i, j) * texelSize;
+            float depth = projCoord.z;
+            shadowFactor += sampleShadowMap(samplePoint, depth);
+            ++sampleCount;
+        }
+    }
+    shadowFactor /= sampleCount;
+    return shadowFactor;
+}
+
 void main()
 {
     vec3 L = normalize(varyingLightDir);
@@ -107,10 +135,7 @@ void main()
 
     vec4 textureColor = texture(u_Texture, v_TexCoord);
 
-    vec3 projCoord = shadowCoord.xyz / shadowCoord.w;
-    projCoord = projCoord * 0.5 + 0.5;
     fragColor = lightAmbient * u_Material.ambient;
-    if (texture(shTex, projCoord.xy).r >= projCoord.z) {
-        fragColor += lightDiffuse * u_Material.diffuse + lightSpecular * u_Material.specular;
-    }
+
+    fragColor += pcfVisibility() * (lightDiffuse * u_Material.diffuse + lightSpecular * u_Material.specular);
 }

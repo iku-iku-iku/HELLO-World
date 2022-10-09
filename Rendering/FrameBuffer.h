@@ -5,7 +5,8 @@
 #ifndef HELLO_FRAMEBUFFER_H
 #define HELLO_FRAMEBUFFER_H
 
-#include "Renderer.h"
+#include <GL/glew.h>
+#include "Core/Log.h"
 
 class FrameBuffer {
 public:

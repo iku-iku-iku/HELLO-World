@@ -14,8 +14,12 @@ namespace core {
         }
     }
 
-    void Camera::SetProjection(float fov, float aspect, float zNear, float zFar) {
-        m_Proj = glm::perspective(fov, aspect, zNear, zFar);
+    void Camera::SetPerspectiveProjection(float fov, float aspect, float zNear, float zFar) {
+        m_PerspectiveProjection = glm::perspective(fov, aspect, zNear, zFar);
+    }
+
+    void Camera::SetOrthographicProjection(float left, float right, float bottom, float top) {
+        m_OrthographicProjection = glm::ortho(left, right, bottom, top);
     }
 
     void Camera::SetTranslation(float x, float y, float z) {
@@ -27,7 +31,10 @@ namespace core {
     Camera::Camera() {
         int width, height;
         world.GetWindow()->GetFrameBufferSize(width, height);
-        SetProjection(1.3f, (float) width / (float) height, .1f, 100.f);
+        SetPerspectiveProjection(1.3f, (float) width / (float) height, .1f, 100.f);
+
+        float widthHeightRatio = world.GetWindow()->GetWidthHeightRatio();
+        SetOrthographicProjection(-5.f * widthHeightRatio, 5.f * widthHeightRatio, -5.f, 5.f);
         SetTranslation(0.f, 1.f, 5.f);
     }
 

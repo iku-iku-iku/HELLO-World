@@ -3,10 +3,8 @@
 //
 
 #include "Ring.h"
-#include "imgui.h"
 #include "glm/gtc/matrix_transform.hpp"
-#include "IndexBuffer.h"
-#include "VertexBuffer.h"
+
 
 namespace {
     using glm::sin, glm::cos;
@@ -58,10 +56,4 @@ void Ring::UpdateData() {
     m_Data.IndexData = m_RingIndices.data();
     m_Data.VertexData = m_RingVertexData.data();
     m_Data.VertexDataSize = m_RingVertexData.size() * sizeof(m_RingVertexData[0]);
-}
-
-void Ring::SetData(VertexBuffer &vb, IndexBuffer &ib) {
-    UpdateData();
-    vb.SetData(m_Data.VertexData, m_Data.VertexDataSize);
-    ib.SetData(m_Data.IndexData, m_Data.IndexCount);
 }

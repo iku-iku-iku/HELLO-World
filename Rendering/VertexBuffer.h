@@ -1,5 +1,4 @@
-#ifndef __VERTEXBUFFER__H_
-#define __VERTEXBUFFER__H_
+#pragma once
 
 class VertexBuffer {
 private:
@@ -23,5 +22,3 @@ public:
 private:
     unsigned int m_MaxBufferSize;
 };
-
-#endif

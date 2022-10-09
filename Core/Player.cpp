@@ -9,7 +9,7 @@
 
 core::Player::~Player() {
     if (Editor::OnInput().RemoveListener(InputKey)) {
-        LOG("Remove Successfully")
+        SUCCEED("Remove InputKey Listener")
     }
 }
 

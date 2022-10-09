@@ -3,7 +3,6 @@
 //
 
 #include "World.h"
-#include "Core/Log.h"
 #include "Ring.h"
 #include "Plane.h"
 
@@ -19,9 +18,9 @@ namespace core
     void World::PreInit()
     {
         m_Window = std::make_unique<Window>();
-        if (!m_Window->IsValid) { LOG("fail to init window") }
+        if (!m_Window->IsValid) { ERROR("fail to init window") }
 
-        LOG("PreInit")
+        SUCCEED("PreInit")
     }
 
     void World::Init()
@@ -32,7 +31,7 @@ namespace core
         m_Player = std::make_unique<Player>();
         m_Player->SetCamera(m_Cameras[0].get());
 
-        LOG("Init")
+        SUCCEED("World Init")
     }
 
     void World::PostInit()
@@ -40,7 +39,7 @@ namespace core
         m_ShapeVec.emplace_back(std::make_unique<Ring>());
         m_ShapeVec.emplace_back(std::make_unique<Plane>());
         
-        LOG("PostInit")
+        SUCCEED("PostInit")
     }
 
     void World::Update()

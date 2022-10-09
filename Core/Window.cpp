@@ -1,27 +1,22 @@
-#include "Core/Window.h"
-#include <GLFW/glfw3.h>
 #include "Core/Log.h"
+#include <GLFW/glfw3.h>
+#include "Core/Window.h"
 
-namespace core
-{
-    Window::Window()
-    {
+namespace core {
+    Window::Window() {
         Init();
     }
 
-    Window::~Window()
-    {
+    Window::~Window() {
         glfwDestroyWindow(m_Window);
         glfwTerminate();
     }
 
-    bool Window::ShouldClose() const
-    {
+    bool Window::ShouldClose() const {
         return glfwWindowShouldClose(m_Window);
     }
 
-    void Window::Update()
-    {
+    void Window::Update() {
         /* Swap front and back buffers */
         glfwSwapBuffers(m_Window);
 
@@ -29,8 +24,7 @@ namespace core
         glfwPollEvents();
     }
 
-    void Window::Init()
-    {
+    void Window::Init() {
         IsValid = true;
 
         /* Initialize the library */
@@ -44,9 +38,8 @@ namespace core
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
         /* Create a windowed mode window and its OpenGL context */
 
-        m_Window = glfwCreateWindow(640, 480, "Hello World", nullptr, nullptr);
-        if (!m_Window)
-        {
+        m_Window = glfwCreateWindow(Width, Height, "HELLO", nullptr, nullptr);
+        if (!m_Window) {
             glfwTerminate();
             IsValid = false;
             return;
@@ -58,10 +51,24 @@ namespace core
 
         glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
 
-        LOG("Init Window")
+        int w, h; GetFrameBufferSize(w, h);
+        SUCCEED("Init Window, Width: %d, Height: %d", w, h)
     }
 
-    void Window::GetFrameBufferSize(int& width, int& height){ 
+    void Window::GetFrameBufferSize(int &width, int &height) const {
         glfwGetFramebufferSize(m_Window, &width, &height);
+    }
+
+    float Window::GetWidthHeightRatio() const {
+        int width, height;
+        GetFrameBufferSize(width, height);
+        return static_cast<float>(width) / static_cast<float>(height);
+    }
+
+    void Window::GetPrimaryMonitorSize(int &width, int &height) const {
+        GLFWmonitor *monitor = glfwGetPrimaryMonitor();
+        const GLFWvidmode *monitorMode = glfwGetVideoMode(monitor);
+        width = monitorMode->width;
+        height = monitorMode->height;
     }
 } // namespace core

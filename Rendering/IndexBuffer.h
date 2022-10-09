@@ -1,5 +1,4 @@
-#ifndef __INDEXBUFFER__H_
-#define __INDEXBUFFER__H_
+#pragma once
 
 class IndexBuffer {
     typedef unsigned int IndexType;
@@ -27,5 +26,3 @@ public:
 private:
     unsigned int m_MaxIndexCnt;
 };
-
-#endif

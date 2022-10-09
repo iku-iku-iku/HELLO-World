@@ -73,7 +73,7 @@ std::unique_ptr<Texture> Texture::CreateDepthTexture()
     return p;
 }
 
-std::unique_ptr<Texture> Texture::CreateCubemap(const char *map_path[])
+std::unique_ptr<Texture> Texture::CreateCubeMap(const char *map_path[])
 {
     auto p = std::make_unique<Texture>(GL_TEXTURE_CUBE_MAP);
     glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
@@ -95,7 +95,7 @@ std::unique_ptr<Texture> Texture::CreateCubemap(const char *map_path[])
         }
         else
         {
-            LOG("Fail to load texture image")
+            ERROR("Fail to load texture image")
         }
 
         stbi_image_free(buffer);

@@ -4,6 +4,8 @@
 
 #include "Shape.h"
 #include "glm/gtc/matrix_transform.hpp"
+#include "VertexBuffer.h"
+#include "IndexBuffer.h"
 
 glm::mat4 Shape::GetModelMatrix() const {
     glm::mat4 model = glm::mat4(1.f);
@@ -13,4 +15,10 @@ glm::mat4 Shape::GetModelMatrix() const {
     model *= glm::rotate(glm::mat4(1.f), m_Rotation.x, glm::vec3(1.f, 0.f, 0.f));
     model *= glm::scale(glm::mat4(1.f), m_Scale);
     return model;
+}
+
+void Shape::SetData(VertexBuffer &vb, IndexBuffer &ib) {
+    UpdateData();
+    vb.SetData(m_Data.VertexData, m_Data.VertexDataSize);
+    ib.SetData(m_Data.IndexData, m_Data.IndexCount);
 }

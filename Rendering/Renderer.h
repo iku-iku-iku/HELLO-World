@@ -2,23 +2,35 @@
 #define __RENDERER__H_
 
 #include <GL/glew.h>
-
-#define GLCALL(x)   \
-    GLClearError(); \
-    x;              \
-    GLCheckError(#x, __FILE__, __LINE__);
-
-static const char *GetErrorMsg(GLenum err);
-
-void GLClearError();
-
-void GLCheckError(const char *function, const char *file, int line);
+#include <memory>
+#include "Shader.h"
+#include "Shape.h"
+#include "FrameBuffer.h"
+#include "VertexArray.h"
+#include "IndexBuffer.h"
+#include "Texture.h"
 
 class Renderer {
 public:
-    void Clear();
-    void ClearColor();
-    void Draw(const class VertexArray& va, const class  IndexBuffer&ib, const class Shader& shader) const;
+    Renderer();
+    static void Clear();
+
+    static void ClearColor();
+
+    void Render(const Shader &shader) const;
+
+    void RenderDepthMap();
+
+    void RenderShape(Shape &shape, const Shader &shader);
+protected:
+    std::unique_ptr<FrameBuffer> m_FrameBuffer;
+    std::unique_ptr<VertexArray> m_VertexArray;
+    std::unique_ptr<VertexBuffer> m_VertexBuffer;
+    std::unique_ptr<IndexBuffer> m_IndexBuffer;
+    std::unique_ptr<Texture> m_DepthMap;
+    std::unique_ptr<Shader> m_DepthRenderingShader;
+
+    void InitOpenGLEnv();
 };
 
 #endif

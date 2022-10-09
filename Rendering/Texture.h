@@ -38,7 +38,7 @@ public:
 
     static std::unique_ptr<Texture> CreateDepthTexture();
 
-    static std::unique_ptr<Texture> CreateCubemap(const char* map_path[]);
+    static std::unique_ptr<Texture> CreateCubeMap(const char* map_path[]);
 };
 
 #endif //HELLO_TEXTURE_H

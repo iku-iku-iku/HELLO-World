@@ -13,13 +13,19 @@ namespace core {
     public:
         Camera();
 
-        const glm::mat4 &GetProjection() const { return m_Proj; }
+        const glm::mat4 &GetPerspectiveProjection() const { return m_PerspectiveProjection; }
+        const glm::mat4 &GetOrthographicProjection() const {return m_OrthographicProjection;}
 
         const glm::mat4 &GetView() const;
 
-        glm::mat4 GetProjectionView() const { return GetProjection() * GetView(); }
+        glm::mat4 GetViewProjection3D() const { return GetPerspectiveProjection() * GetView(); }
+        glm::mat4 GetViewProjection2D() const {return GetOrthographicProjection() * GetView(); }
 
-        void SetProjection(float fov, float aspect, float zNear, float zFar);
+        // 固定在屏幕上的元素应用的变换，不随相机移动而移动
+        const glm::mat4& GetStaticViewProjection2D() const {return GetOrthographicProjection();}
+
+        void SetPerspectiveProjection(float fov, float aspect, float zNear, float zFar);
+        void SetOrthographicProjection(float left, float right, float bottom, float top);
 
         void SetTranslation(float x, float y, float z);
 
@@ -38,7 +44,8 @@ namespace core {
         mutable Matrix4f m_View{};
         glm::vec3 m_ViewTranslation{};
         Rotation m_ViewRotation{};
-        glm::mat4 m_Proj{};
+        glm::mat4 m_PerspectiveProjection{};
+        glm::mat4 m_OrthographicProjection{};
     };
 
 }

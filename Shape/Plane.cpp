@@ -28,11 +28,6 @@ namespace {
     };
 }
 
-void Plane::SetData(VertexBuffer &vb, IndexBuffer &ib) {
-    vb.SetData(m_Data.VertexData, m_Data.VertexDataSize);
-    ib.SetData(m_Data.IndexData, m_Data.IndexCount);
-}
-
 Plane::Plane() {
     m_Data.IndexData = Indices;
     m_Data.IndexCount = sizeof(Indices) / sizeof(Indices[0]);

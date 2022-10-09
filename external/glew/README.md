@@ -191,15 +191,15 @@ with bug reports, as appropriate.
 	Running on a Intel(R) HD Graphics 3000 from Intel
 	OpenGL version 3.1.0 - Build 9.17.10.4229 is supported
 
-	GL_VERSION_1_1:                                                OK
+	GL_VERSION_1_1:                                                SUCCEED
 	---------------
 
-	GL_VERSION_1_2:                                                OK
+	GL_VERSION_1_2:                                                SUCCEED
 	---------------
-	  glCopyTexSubImage3D:                                         OK
-	  glDrawRangeElements:                                         OK
-	  glTexImage3D:                                                OK
-	  glTexSubImage3D:                                             OK
+	  glCopyTexSubImage3D:                                         SUCCEED
+	  glDrawRangeElements:                                         SUCCEED
+	  glTexImage3D:                                                SUCCEED
+	  glTexSubImage3D:                                             SUCCEED
 
 	...
 

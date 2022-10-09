@@ -388,8 +388,8 @@ void foo()
     glm::ivec4 a;
     ...
 
-    glm::vec4 b(a); // Explicit conversion, OK
-    glm::vec4 c = a; // Implicit conversion, OK
+    glm::vec4 b(a); // Explicit conversion, SUCCEED
+    glm::vec4 c = a; // Implicit conversion, SUCCEED
     ...
 }
 ```
@@ -404,7 +404,7 @@ void foo()
 {
     glm::ivec4 a;
     {
-        glm::vec4 b(a); // Explicit conversion, OK
+        glm::vec4 b(a); // Explicit conversion, SUCCEED
         glm::vec4 c = a; // Implicit conversion, ERROR
         ...
 }
@@ -653,10 +653,10 @@ void foo()
   vec4 ClampedA = clamp(Color.rgba, 0.f, 1.f); // ERROR
 
   // Explicit conversion through a constructor
-  vec4 ClampedB = clamp(vec4(Color.rgba), 0.f, 1.f); // OK
+  vec4 ClampedB = clamp(vec4(Color.rgba), 0.f, 1.f); // SUCCEED
 
   // Explicit conversion through operator()
-  vec4 ClampedC = clamp(Color.rgba(), 0.f, 1.f); // OK
+  vec4 ClampedC = clamp(Color.rgba(), 0.f, 1.f); // SUCCEED
 }
 ```
 

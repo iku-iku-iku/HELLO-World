@@ -1589,7 +1589,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
                 ImGui::Checkbox("Don't ask me next time", &dont_ask_me_next_time);
                 ImGui::PopStyleVar();
 
-                if (ImGui::Button("OK", ImVec2(120,0))) { ImGui::CloseCurrentPopup(); }
+                if (ImGui::Button("SUCCEED", ImVec2(120,0))) { ImGui::CloseCurrentPopup(); }
                 ImGui::SetItemDefaultFocus();
                 ImGui::SameLine();
                 if (ImGui::Button("Cancel", ImVec2(120,0))) { ImGui::CloseCurrentPopup(); }
@@ -2016,7 +2016,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
             ImGui::Button("Drag Me");
             if (ImGui::IsItemActive())
             {
-                // Draw a line between the button and the mouse cursor
+                // Render a line between the button and the mouse cursor
                 ImDrawList* draw_list = ImGui::GetWindowDrawList();
                 draw_list->PushClipRectFullScreen();
                 draw_list->AddLine(io.MouseClickedPos[0], io.MousePos, ImGui::GetColorU32(ImGuiCol_Button), 4.0f);
@@ -2933,7 +2933,7 @@ static void ShowExampleAppConsole(bool* p_open)
 // Usage:
 //  static ExampleAppLog my_log;
 //  my_log.AddLog("Hello %d world\n", 123);
-//  my_log.Draw("title");
+//  my_log.Render("title");
 struct ExampleAppLog
 {
     ImGuiTextBuffer     Buf;

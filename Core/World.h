@@ -10,10 +10,7 @@
 #include "Camera.h"
 #include "Player.h"
 #include "Core/Window.h"
-#include "RenderingHeaders.h"
 #include "Shape.h"
-
-
 
 namespace core
 {

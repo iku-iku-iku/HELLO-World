@@ -13,24 +13,19 @@
 
 class Ring : public Shape {
 public:
-    ~Ring() = default;
-
-    void SetData(class VertexBuffer &vb, class IndexBuffer &ib);
+    ~Ring() override = default;
 
 private:
     float m_CircleRadius = .2f;
     float m_RingRadius = .6f;
 
     int m_RingPointsCnt = 20;
-    int m_CirclePointsCnt = 20;
-
-    const int m_MaxRingPointCnt = 100;
-    const int m_MaxCirclePointCnt = 100;
+    int m_CirclePointsCnt = 30;
 
     std::vector<float> m_RingVertexData;
     std::vector<unsigned int> m_RingIndices;
 
-    void UpdateData();
+    void UpdateData() override;
 };
 
 #endif //HELLO_RING_H

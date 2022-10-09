@@ -5909,7 +5909,7 @@ static void *stbi__tga_load(stbi__context *s, int *x, int *y, int *comp, int req
          {
             read_next_pixel = 1;
          }
-         //   OK, if I need to read a pixel, do it now
+         //   SUCCEED, if I need to read a pixel, do it now
          if ( read_next_pixel )
          {
             //   load however much data we did have
@@ -5991,7 +5991,7 @@ static void *stbi__tga_load(stbi__context *s, int *x, int *y, int *comp, int req
    tga_palette_start = tga_palette_len = tga_palette_bits =
          tga_x_origin = tga_y_origin = 0;
    STBI_NOTUSED(tga_palette_start);
-   //   OK, done
+   //   SUCCEED, done
    return tga_data;
 }
 #endif
