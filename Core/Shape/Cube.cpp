@@ -1,5 +1,5 @@
-#include "Shape/Cube.h"
 #include "glm/gtc/matrix_transform.hpp"
+#include "Cube.h"
 
 namespace {
     float VertexData[] = {
@@ -51,10 +51,12 @@ namespace {
     };
 }
 
-Cube::Cube() {
-    m_Data.VertexData = VertexData;
-    m_Data.IndexData = Indices;
-    m_Data.VertexDataSize = sizeof(VertexData);
-    m_Data.IndexCount = sizeof(Indices) / sizeof(Indices[0]);
-}
+namespace core {
 
+    Cube::Cube() {
+        m_MeshData.VertexData = VertexData;
+        m_MeshData.IndexData = Indices;
+        m_MeshData.VertexDataSize = sizeof(VertexData);
+        m_MeshData.IndexCount = sizeof(Indices) / sizeof(Indices[0]);
+    }
+}

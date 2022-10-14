@@ -13,13 +13,12 @@ namespace core
 
         void Update();
 
-        bool IsValid;
-
         void GetFrameBufferSize(int& width, int& height) const;
 
-        void GetPrimaryMonitorSize(int& width, int& height) const;
+        static void GetPrimaryMonitorSize(int& width, int& height) ;
 
         float GetWidthHeightRatio() const;
+
     private:
         GLFWwindow *m_Window;
 
@@ -27,5 +26,9 @@ namespace core
 
         const int Width = 840;
         const int Height = 580;
+
+        static GLFWwindow *CreateWindow(int width, int height);
+
+        static void InitWindow(GLFWwindow* window);
     };
 } // namespace core

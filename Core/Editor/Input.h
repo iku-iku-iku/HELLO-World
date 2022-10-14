@@ -7,21 +7,24 @@
 
 #include <functional>
 #include <unordered_set>
-#include <Core/Event.h>
+#include "Core/Event.h"
 
 class GLFWwindow;
 namespace Editor {
     struct KeyStatus {
         typedef unsigned char uint8;
-        uint8 W: 1;
-        uint8 S: 1;
-        uint8 A: 1;
-        uint8 D: 1;
-        uint8 Q: 1;
-        uint8 E: 1;
-        uint8 M_L: 1;
-        uint8 M_R: 1;
-        uint8 ESCAPE: 1;
+        uint8 K_W: 1;
+        uint8 K_S: 1;
+        uint8 K_A: 1;
+        uint8 K_D: 1;
+        uint8 K_Q: 1;
+        uint8 K_E: 1;
+        uint8 K_M_L: 1;
+        uint8 K_M_R: 1;
+        uint8 K_ESCAPE: 1;
+        uint8 K_1 : 1;
+        uint8 K_2 : 1;
+        uint8 K_3 : 1;
     };
 
     struct Cursor {

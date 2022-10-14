@@ -239,12 +239,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga7ca98668a5786f19c7b38299ebbc9b4c"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL mat&lt; 3, 3, T, defaultp &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00319.html#ga7ca98668a5786f19c7b38299ebbc9b4c">orientate3</a> (T const &amp;angle)</td></tr>
 <tr class="memdesc:ga7ca98668a5786f19c7b38299ebbc9b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 2D 4 * 4 homogeneous rotation matrix from an euler angle.  <a href="a00319.html#ga7ca98668a5786f19c7b38299ebbc9b4c">More...</a><br /></td></tr>
 <tr class="separator:ga7ca98668a5786f19c7b38299ebbc9b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga7238c8e15c7720e3ca6a45ab151eeabb"><td class="memTemplParams" colspan="2">template&lt;typename T , qualifier Q&gt; </td></tr>
-<tr class="memitem:ga7238c8e15c7720e3ca6a45ab151eeabb"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL mat&lt; 3, 3, T, Q &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00319.html#ga7238c8e15c7720e3ca6a45ab151eeabb">orientate3</a> (vec&lt; 3, T, Q &gt; const &amp;angles)</td></tr>
+<tr class="memitem:ga7238c8e15c7720e3ca6a45ab151eeabb"><td class="memTemplParams" colspan="2">template&lt;typename T , qualifier K_Q&gt; </td></tr>
+<tr class="memitem:ga7238c8e15c7720e3ca6a45ab151eeabb"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL mat&lt; 3, 3, T, K_Q &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00319.html#ga7238c8e15c7720e3ca6a45ab151eeabb">orientate3</a> (vec&lt; 3, T, K_Q &gt; const &amp;angles)</td></tr>
 <tr class="memdesc:ga7238c8e15c7720e3ca6a45ab151eeabb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 3D 3 * 3 rotation matrix from euler angles (Y * X * Z).  <a href="a00319.html#ga7238c8e15c7720e3ca6a45ab151eeabb">More...</a><br /></td></tr>
 <tr class="separator:ga7238c8e15c7720e3ca6a45ab151eeabb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4a044653f71a4ecec68e0b623382b48a"><td class="memTemplParams" colspan="2">template&lt;typename T , qualifier Q&gt; </td></tr>
-<tr class="memitem:ga4a044653f71a4ecec68e0b623382b48a"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL mat&lt; 4, 4, T, Q &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00319.html#ga4a044653f71a4ecec68e0b623382b48a">orientate4</a> (vec&lt; 3, T, Q &gt; const &amp;angles)</td></tr>
+<tr class="memitem:ga4a044653f71a4ecec68e0b623382b48a"><td class="memTemplParams" colspan="2">template&lt;typename T , qualifier K_Q&gt; </td></tr>
+<tr class="memitem:ga4a044653f71a4ecec68e0b623382b48a"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL mat&lt; 4, 4, T, K_Q &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00319.html#ga4a044653f71a4ecec68e0b623382b48a">orientate4</a> (vec&lt; 3, T, K_Q &gt; const &amp;angles)</td></tr>
 <tr class="memdesc:ga4a044653f71a4ecec68e0b623382b48a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a 3D 4 * 4 homogeneous rotation matrix from euler angles (Y * X * Z).  <a href="a00319.html#ga4a044653f71a4ecec68e0b623382b48a">More...</a><br /></td></tr>
 <tr class="separator:ga4a044653f71a4ecec68e0b623382b48a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae6aa26ccb020d281b449619e419a609e"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
@@ -1530,9 +1530,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GLM_FUNC_DECL mat&lt;3, 3, T, Q&gt; glm::orientate3 </td>
+          <td class="memname">GLM_FUNC_DECL mat&lt;3, 3, T, K_Q&gt; glm::orientate3 </td>
           <td>(</td>
-          <td class="paramtype">vec&lt; 3, T, Q &gt; const &amp;&#160;</td>
+          <td class="paramtype">vec&lt; 3, T, K_Q &gt; const &amp;&#160;</td>
           <td class="paramname"><em>angles</em></td><td>)</td>
           <td></td>
         </tr>
@@ -1549,9 +1549,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GLM_FUNC_DECL mat&lt;4, 4, T, Q&gt; glm::orientate4 </td>
+          <td class="memname">GLM_FUNC_DECL mat&lt;4, 4, T, K_Q&gt; glm::orientate4 </td>
           <td>(</td>
-          <td class="paramtype">vec&lt; 3, T, Q &gt; const &amp;&#160;</td>
+          <td class="paramtype">vec&lt; 3, T, K_Q &gt; const &amp;&#160;</td>
           <td class="paramname"><em>angles</em></td><td>)</td>
           <td></td>
         </tr>

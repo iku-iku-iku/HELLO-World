@@ -91,12 +91,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ga1e28539d3a46965ed9ef92ec7cb3b18a"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL genType&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ga1e28539d3a46965ed9ef92ec7cb3b18a">fclamp</a> (genType x, genType minVal, genType maxVal)</td></tr>
 <tr class="memdesc:ga1e28539d3a46965ed9ef92ec7cb3b18a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns min(max(x, minVal), maxVal) for each component in x.  <a href="a00321.html#ga1e28539d3a46965ed9ef92ec7cb3b18a">More...</a><br /></td></tr>
 <tr class="separator:ga1e28539d3a46965ed9ef92ec7cb3b18a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga60796d08903489ee185373593bc16b9d"><td class="memTemplParams" colspan="2">template&lt;length_t L, typename T , qualifier Q&gt; </td></tr>
-<tr class="memitem:ga60796d08903489ee185373593bc16b9d"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL vec&lt; L, T, Q &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ga60796d08903489ee185373593bc16b9d">fclamp</a> (vec&lt; L, T, Q &gt; const &amp;x, T minVal, T maxVal)</td></tr>
+<tr class="memitem:ga60796d08903489ee185373593bc16b9d"><td class="memTemplParams" colspan="2">template&lt;length_t L, typename T , qualifier K_Q&gt; </td></tr>
+<tr class="memitem:ga60796d08903489ee185373593bc16b9d"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL vec&lt; L, T, K_Q &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ga60796d08903489ee185373593bc16b9d">fclamp</a> (vec&lt; L, T, K_Q &gt; const &amp;x, T minVal, T maxVal)</td></tr>
 <tr class="memdesc:ga60796d08903489ee185373593bc16b9d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns min(max(x, minVal), maxVal) for each component in x.  <a href="a00321.html#ga60796d08903489ee185373593bc16b9d">More...</a><br /></td></tr>
 <tr class="separator:ga60796d08903489ee185373593bc16b9d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5c15fa4709763c269c86c0b8b3aa2297"><td class="memTemplParams" colspan="2">template&lt;length_t L, typename T , qualifier Q&gt; </td></tr>
-<tr class="memitem:ga5c15fa4709763c269c86c0b8b3aa2297"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL vec&lt; L, T, Q &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ga5c15fa4709763c269c86c0b8b3aa2297">fclamp</a> (vec&lt; L, T, Q &gt; const &amp;x, vec&lt; L, T, Q &gt; const &amp;minVal, vec&lt; L, T, Q &gt; const &amp;maxVal)</td></tr>
+<tr class="memitem:ga5c15fa4709763c269c86c0b8b3aa2297"><td class="memTemplParams" colspan="2">template&lt;length_t L, typename T , qualifier K_Q&gt; </td></tr>
+<tr class="memitem:ga5c15fa4709763c269c86c0b8b3aa2297"><td class="memTemplItemLeft" align="right" valign="top">GLM_FUNC_DECL vec&lt; L, T, K_Q &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="a00321.html#ga5c15fa4709763c269c86c0b8b3aa2297">fclamp</a> (vec&lt; L, T, K_Q &gt; const &amp;x, vec&lt; L, T, K_Q &gt; const &amp;minVal, vec&lt; L, T, K_Q &gt; const &amp;maxVal)</td></tr>
 <tr class="memdesc:ga5c15fa4709763c269c86c0b8b3aa2297"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns min(max(x, minVal), maxVal) for each component in x.  <a href="a00321.html#ga5c15fa4709763c269c86c0b8b3aa2297">More...</a><br /></td></tr>
 <tr class="separator:ga5c15fa4709763c269c86c0b8b3aa2297"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gae5792cb2b51190057e4aea027eb56f81"><td class="memTemplParams" colspan="2">template&lt;typename genType &gt; </td></tr>
@@ -207,9 +207,9 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GLM_FUNC_DECL vec&lt;L, T, Q&gt; glm::fclamp </td>
+          <td class="memname">GLM_FUNC_DECL vec&lt;L, T, K_Q&gt; glm::fclamp </td>
           <td>(</td>
-          <td class="paramtype">vec&lt; L, T, Q &gt; const &amp;&#160;</td>
+          <td class="paramtype">vec&lt; L, T, K_Q &gt; const &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
@@ -238,7 +238,7 @@ Functions</h2></td></tr>
   <table class="tparams">
     <tr><td class="paramname">L</td><td>Integer between 1 and 4 included that qualify the dimension of the vector </td></tr>
     <tr><td class="paramname">T</td><td>Floating-point scalar types </td></tr>
-    <tr><td class="paramname">Q</td><td>Value from qualifier enum</td></tr>
+    <tr><td class="paramname">K_Q</td><td>Value from qualifier enum</td></tr>
   </table>
   </dd>
 </dl>
@@ -251,21 +251,21 @@ Functions</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">GLM_FUNC_DECL vec&lt;L, T, Q&gt; glm::fclamp </td>
+          <td class="memname">GLM_FUNC_DECL vec&lt;L, T, K_Q&gt; glm::fclamp </td>
           <td>(</td>
-          <td class="paramtype">vec&lt; L, T, Q &gt; const &amp;&#160;</td>
+          <td class="paramtype">vec&lt; L, T, K_Q &gt; const &amp;&#160;</td>
           <td class="paramname"><em>x</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vec&lt; L, T, Q &gt; const &amp;&#160;</td>
+          <td class="paramtype">vec&lt; L, T, K_Q &gt; const &amp;&#160;</td>
           <td class="paramname"><em>minVal</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vec&lt; L, T, Q &gt; const &amp;&#160;</td>
+          <td class="paramtype">vec&lt; L, T, K_Q &gt; const &amp;&#160;</td>
           <td class="paramname"><em>maxVal</em>&#160;</td>
         </tr>
         <tr>
@@ -282,7 +282,7 @@ Functions</h2></td></tr>
   <table class="tparams">
     <tr><td class="paramname">L</td><td>Integer between 1 and 4 included that qualify the dimension of the vector </td></tr>
     <tr><td class="paramname">T</td><td>Floating-point scalar types </td></tr>
-    <tr><td class="paramname">Q</td><td>Value from qualifier enum</td></tr>
+    <tr><td class="paramname">K_Q</td><td>Value from qualifier enum</td></tr>
   </table>
   </dd>
 </dl>

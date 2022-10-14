@@ -99,14 +99,14 @@ void Renderer::RenderDepthMap() {
     glDisable(GL_POLYGON_OFFSET_FILL);
 }
 
-void Renderer::RenderShape(Shape &shape, const Shader &shader) {
+void Renderer::RenderShape(core::Shape &shape, const Shader &shader) {
     shape.SetData(*m_VertexBuffer, *m_IndexBuffer);
     Render(shader);
 }
 
 void Renderer::InitOpenGLEnv() {
-    GLenum err = glewInit();
-    if (GLEW_OK != err) {
+    GLenum initRes = glewInit();
+    if (GLEW_OK != initRes) {
         ERROR("glew init failed!")
     }
 

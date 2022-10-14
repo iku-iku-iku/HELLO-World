@@ -128,7 +128,7 @@
 				},
 				{
 					"backtrace" : 11,
-					"path" : "/home/code4love/PROGRAM/cpp/OpenGL/Shape"
+					"path" : "/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape"
 				},
 				{
 					"backtrace" : 12,
@@ -364,43 +364,43 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Shape/Bead.cpp",
+			"path" : "Core/Shape/Bead.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Shape/Cube.cpp",
+			"path" : "Core/Shape/Cube.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Shape/Plane.cpp",
+			"path" : "Core/Shape/Plane.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Shape/Ring.cpp",
+			"path" : "Core/Shape/Ring.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "Shape/Shape.cpp",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "Editor/Input.cpp",
+			"path" : "Core/Shape/Shape.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "Core/Camera.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "Core/Editor/Input.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{

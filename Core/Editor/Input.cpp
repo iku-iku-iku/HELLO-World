@@ -2,17 +2,17 @@
 // Created by iku-iku-iku on 2022/10/2.
 //
 
-#include <GLFW/glfw3.h>
+#include "external/glfw/include/GLFW/glfw3.h"
 #include "Input.h"
 
 #define SET_KEY(KEY) \
         Key = glfwGetKey(window, GLFW_KEY_##KEY); \
         switch (Key) {                           \
             case GLFW_PRESS: \
-                Input::Get().GetKeyStatus().KEY = 1; \
+                Input::Get().GetKeyStatus().K_##KEY = 1; \
                 break;    \
             case GLFW_RELEASE:                   \
-                Input::Get().GetKeyStatus().KEY = 0;  \
+                Input::Get().GetKeyStatus().K_##KEY = 0;  \
                 break;    \
             default:  \
                 break;    \
@@ -34,14 +34,18 @@ namespace Editor {
         SET_KEY(Q)
         SET_KEY(E)
         SET_KEY(ESCAPE)
+        SET_KEY(1)
+        SET_KEY(2)
+        SET_KEY(3)
+
 
         Key = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_LEFT);
         switch (Key) {
             case GLFW_PRESS:
-                Input::Get().GetKeyStatus().M_L = 1;
+                Input::Get().GetKeyStatus().K_M_L = 1;
                 break;
             case GLFW_RELEASE:
-                Input::Get().GetKeyStatus().M_L = 0;
+                Input::Get().GetKeyStatus().K_M_L = 0;
                 break;
             default:
                 break;
@@ -50,10 +54,10 @@ namespace Editor {
         Key = glfwGetMouseButton(window, GLFW_MOUSE_BUTTON_RIGHT);
         switch (Key) {
             case GLFW_PRESS:
-                Input::Get().GetKeyStatus().M_R = 1;
+                Input::Get().GetKeyStatus().K_M_R = 1;
                 break;
             case GLFW_RELEASE:
-                Input::Get().GetKeyStatus().M_R = 0;
+                Input::Get().GetKeyStatus().K_M_R = 0;
                 break;
             default:
                 break;

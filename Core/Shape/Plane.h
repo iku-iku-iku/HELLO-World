@@ -10,10 +10,12 @@
 #include "glm/glm.hpp"
 #include "VertexBufferLayout.h"
 
-class Plane : public Shape
-{
-public:
-    Plane();
-};
+namespace core {
 
+    class Plane : public Shape {
+    public:
+        Plane();
+    };
+
+}
 #endif // HELLO_PLANE_H

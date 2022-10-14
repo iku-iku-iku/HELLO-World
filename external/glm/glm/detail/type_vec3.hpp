@@ -44,7 +44,7 @@ namespace glm
 #		if GLM_CONFIG_XYZW_ONLY
 			T x, y, z;
 #			if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_FUNCTION
-			GLM_SWIZZLE_GEN_VEC_FROM_VEC3_COMP(T, Q, x, y, z)
+			GLM_SWIZZLE_GEN_VEC_FROM_VEC3_COMP(T, K_Q, x, y, z)
 #			endif//GLM_CONFIG_SWIZZLE
 #		elif GLM_CONFIG_ANONYMOUS_STRUCT == GLM_ENABLE
 			union
@@ -53,18 +53,18 @@ namespace glm
 				struct{ T r, g, b; };
 				struct{ T s, t, p; };
 
-				typename detail::storage<3, T, detail::is_aligned<Q>::value>::type data;
+				typename detail::storage<3, T, detail::is_aligned<K_Q>::value>::type data;
 
 #				if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_OPERATOR
-					GLM_SWIZZLE3_2_MEMBERS(T, Q, x, y, z)
-					GLM_SWIZZLE3_2_MEMBERS(T, Q, r, g, b)
-					GLM_SWIZZLE3_2_MEMBERS(T, Q, s, t, p)
-					GLM_SWIZZLE3_3_MEMBERS(T, Q, x, y, z)
-					GLM_SWIZZLE3_3_MEMBERS(T, Q, r, g, b)
-					GLM_SWIZZLE3_3_MEMBERS(T, Q, s, t, p)
-					GLM_SWIZZLE3_4_MEMBERS(T, Q, x, y, z)
-					GLM_SWIZZLE3_4_MEMBERS(T, Q, r, g, b)
-					GLM_SWIZZLE3_4_MEMBERS(T, Q, s, t, p)
+					GLM_SWIZZLE3_2_MEMBERS(T, K_Q, x, y, z)
+					GLM_SWIZZLE3_2_MEMBERS(T, K_Q, r, g, b)
+					GLM_SWIZZLE3_2_MEMBERS(T, K_Q, s, t, p)
+					GLM_SWIZZLE3_3_MEMBERS(T, K_Q, x, y, z)
+					GLM_SWIZZLE3_3_MEMBERS(T, K_Q, r, g, b)
+					GLM_SWIZZLE3_3_MEMBERS(T, K_Q, s, t, p)
+					GLM_SWIZZLE3_4_MEMBERS(T, K_Q, x, y, z)
+					GLM_SWIZZLE3_4_MEMBERS(T, K_Q, r, g, b)
+					GLM_SWIZZLE3_4_MEMBERS(T, K_Q, s, t, p)
 #				endif
 			};
 #		else
@@ -73,7 +73,7 @@ namespace glm
 			union { T z, b, p; };
 
 #			if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_FUNCTION
-				GLM_SWIZZLE_GEN_VEC_FROM_VEC3(T, Q)
+				GLM_SWIZZLE_GEN_VEC_FROM_VEC3(T, K_Q)
 #			endif//GLM_CONFIG_SWIZZLE
 #		endif//GLM_LANG
 
@@ -156,19 +156,19 @@ namespace glm
 		// -- Swizzle constructors --
 #		if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_OPERATOR
 			template<int E0, int E1, int E2>
-			GLM_FUNC_DECL GLM_CONSTEXPR vec(detail::_swizzle<3, T, Q, E0, E1, E2, -1> const& that)
+			GLM_FUNC_DECL GLM_CONSTEXPR vec(detail::_swizzle<3, T, K_Q, E0, E1, E2, -1> const& that)
 			{
 				*this = that();
 			}
 
 			template<int E0, int E1>
-			GLM_FUNC_DECL GLM_CONSTEXPR vec(detail::_swizzle<2, T, Q, E0, E1, -1, -2> const& v, T const& scalar)
+			GLM_FUNC_DECL GLM_CONSTEXPR vec(detail::_swizzle<2, T, K_Q, E0, E1, -1, -2> const& v, T const& scalar)
 			{
 				*this = vec(v(), scalar);
 			}
 
 			template<int E0, int E1>
-			GLM_FUNC_DECL GLM_CONSTEXPR vec(T const& scalar, detail::_swizzle<2, T, Q, E0, E1, -1, -2> const& v)
+			GLM_FUNC_DECL GLM_CONSTEXPR vec(T const& scalar, detail::_swizzle<2, T, K_Q, E0, E1, -1, -2> const& v)
 			{
 				*this = vec(scalar, v());
 			}

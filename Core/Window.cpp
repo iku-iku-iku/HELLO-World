@@ -22,36 +22,27 @@ namespace core {
 
         /* Poll for and process events */
         glfwPollEvents();
+
     }
 
     void Window::Init() {
-        IsValid = true;
-
         /* Initialize the library */
-        if (!glfwInit()) {
-            IsValid = false;
-            return;
-        }
+        const int initRes = glfwInit();
+        REQUIRE(initRes != 0)
 
         glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);
         glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);
         glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);
         /* Create a windowed mode window and its OpenGL context */
 
-        m_Window = glfwCreateWindow(Width, Height, "HELLO", nullptr, nullptr);
-        if (!m_Window) {
-            glfwTerminate();
-            IsValid = false;
-            return;
-        }
-        /* Make the window's context current */
-        glfwMakeContextCurrent(m_Window);
+        int w, h;
+        GetPrimaryMonitorSize(w, h);
+        m_Window = CreateWindow(w / 1, h / 1);
+        REQUIRE(m_Window != nullptr)
 
-        glfwSwapInterval(1);
+        InitWindow(m_Window);
 
-        glfwSetInputMode(m_Window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
-
-        int w, h; GetFrameBufferSize(w, h);
+        GetFrameBufferSize(w, h);
         SUCCEED("Init Window, Width: %d, Height: %d", w, h)
     }
 
@@ -65,10 +56,30 @@ namespace core {
         return static_cast<float>(width) / static_cast<float>(height);
     }
 
-    void Window::GetPrimaryMonitorSize(int &width, int &height) const {
+    void Window::GetPrimaryMonitorSize(int &width, int &height) {
         GLFWmonitor *monitor = glfwGetPrimaryMonitor();
         const GLFWvidmode *monitorMode = glfwGetVideoMode(monitor);
         width = monitorMode->width;
         height = monitorMode->height;
+    }
+
+    GLFWwindow *Window::CreateWindow(int width, int height) {
+        GLFWwindow* window;
+        window = glfwCreateWindow(width, height, "HELLO", nullptr, nullptr);
+        if (!window) {
+            glfwTerminate();
+            return nullptr;
+        }
+        return window;
+    }
+
+    void Window::InitWindow(GLFWwindow *window) {
+        /* Make the window's context current */
+        glfwMakeContextCurrent(window);
+
+        glfwSwapInterval(1);
+
+        glfwSetInputMode(window, GLFW_CURSOR, GLFW_CURSOR_DISABLED);
+
     }
 } // namespace core

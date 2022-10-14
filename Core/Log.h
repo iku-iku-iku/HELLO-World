@@ -1,6 +1,7 @@
 #pragma once
 
 #include <GL/glew.h>
+#include <cstdlib>
 #include <cstdio>
 #include <cstdarg>
 
@@ -27,6 +28,8 @@
 #define SUCCEED(Msg, args...) LOG_MSG("SUCCEED", Msg, BG_BLACK, FONT_GREEN, ##args)
 #define ERROR(Msg, args...) LOG_MSG("ERROR", Msg, BG_BLACK, FONT_RED, ##args)
 #define WARN(Msg, args...) LOG_MSG("WARN", Msg, BG_BLACK, FONT_YELLOW, ##args)
+#define REQUIRE(Val) if (!(Val)) { LOG_MSG("FAILED", #Val, BG_RED, FONT_BLACK); exit(-1); }
+#define ASSERT(Val, Msg, args...) if (!(Val)) { LOG_MSG("ASSERTION FAILED", Msg, BG_RED, FONT_BLACK, ##args)}
 
 namespace core {
     inline void
@@ -39,10 +42,10 @@ namespace core {
         va_start(args, fontColor);
         vsprintf(buf, msg, args);
         printf("%-50s", buf);
-
-        printf("%s:%d", file, line);
-        puts("");
         va_end(args);
+
+        printf(" [%s:%d]", file, line);
+        puts("");
         fflush(stdout);
     }
 } // namespace Core

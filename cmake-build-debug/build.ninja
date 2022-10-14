@@ -52,182 +52,182 @@ build cmake_object_order_depends_target_HELLO: phony || cmake_object_order_depen
 build CMakeFiles/HELLO.dir/main.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/main.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/main.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir
 
 build CMakeFiles/HELLO.dir/Rendering/FrameBuffer.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Rendering/FrameBuffer.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Rendering/FrameBuffer.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Rendering
 
 build CMakeFiles/HELLO.dir/Rendering/IndexBuffer.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Rendering/IndexBuffer.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Rendering/IndexBuffer.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Rendering
 
 build CMakeFiles/HELLO.dir/Rendering/Renderer.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Rendering/Renderer.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Rendering/Renderer.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Rendering
 
 build CMakeFiles/HELLO.dir/Rendering/Shader.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Rendering/Shader.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Rendering/Shader.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Rendering
 
 build CMakeFiles/HELLO.dir/Rendering/Texture.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Rendering/Texture.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Rendering/Texture.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Rendering
 
 build CMakeFiles/HELLO.dir/Rendering/VertexArray.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Rendering/VertexArray.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Rendering/VertexArray.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Rendering
 
 build CMakeFiles/HELLO.dir/Rendering/VertexBuffer.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Rendering/VertexBuffer.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Rendering/VertexBuffer.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Rendering
 
 build CMakeFiles/HELLO.dir/Rendering/WorldRenderer.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Rendering/WorldRenderer.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Rendering/WorldRenderer.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Rendering
 
 build CMakeFiles/HELLO.dir/vendor/imgui/imgui.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui/imgui.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/vendor/imgui/imgui.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/vendor/imgui
 
 build CMakeFiles/HELLO.dir/vendor/imgui/imgui_demo.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui/imgui_demo.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/vendor/imgui/imgui_demo.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/vendor/imgui
 
 build CMakeFiles/HELLO.dir/vendor/imgui/imgui_draw.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui/imgui_draw.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/vendor/imgui/imgui_draw.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/vendor/imgui
 
 build CMakeFiles/HELLO.dir/vendor/imgui/imgui_impl_glfw_gl3.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui/imgui_impl_glfw_gl3.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/vendor/imgui/imgui_impl_glfw_gl3.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/vendor/imgui
 
 build CMakeFiles/HELLO.dir/vendor/stb_image/stb_image.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image/stb_image.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/vendor/stb_image/stb_image.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/vendor/stb_image
 
-build CMakeFiles/HELLO.dir/Shape/Bead.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Shape/Bead.cpp || cmake_object_order_depends_target_HELLO
-  DEP_FILE = CMakeFiles/HELLO.dir/Shape/Bead.cpp.o.d
+build CMakeFiles/HELLO.dir/Core/Shape/Bead.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Shape/Bead.cpp || cmake_object_order_depends_target_HELLO
+  DEP_FILE = CMakeFiles/HELLO.dir/Core/Shape/Bead.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
-  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Shape
+  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core/Shape
 
-build CMakeFiles/HELLO.dir/Shape/Cube.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Shape/Cube.cpp || cmake_object_order_depends_target_HELLO
-  DEP_FILE = CMakeFiles/HELLO.dir/Shape/Cube.cpp.o.d
+build CMakeFiles/HELLO.dir/Core/Shape/Cube.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Shape/Cube.cpp || cmake_object_order_depends_target_HELLO
+  DEP_FILE = CMakeFiles/HELLO.dir/Core/Shape/Cube.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
-  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Shape
+  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core/Shape
 
-build CMakeFiles/HELLO.dir/Shape/Plane.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Shape/Plane.cpp || cmake_object_order_depends_target_HELLO
-  DEP_FILE = CMakeFiles/HELLO.dir/Shape/Plane.cpp.o.d
+build CMakeFiles/HELLO.dir/Core/Shape/Plane.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Shape/Plane.cpp || cmake_object_order_depends_target_HELLO
+  DEP_FILE = CMakeFiles/HELLO.dir/Core/Shape/Plane.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
-  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Shape
+  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core/Shape
 
-build CMakeFiles/HELLO.dir/Shape/Ring.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Shape/Ring.cpp || cmake_object_order_depends_target_HELLO
-  DEP_FILE = CMakeFiles/HELLO.dir/Shape/Ring.cpp.o.d
+build CMakeFiles/HELLO.dir/Core/Shape/Ring.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Shape/Ring.cpp || cmake_object_order_depends_target_HELLO
+  DEP_FILE = CMakeFiles/HELLO.dir/Core/Shape/Ring.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
-  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Shape
+  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core/Shape
 
-build CMakeFiles/HELLO.dir/Shape/Shape.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Shape/Shape.cpp || cmake_object_order_depends_target_HELLO
-  DEP_FILE = CMakeFiles/HELLO.dir/Shape/Shape.cpp.o.d
+build CMakeFiles/HELLO.dir/Core/Shape/Shape.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Shape/Shape.cpp || cmake_object_order_depends_target_HELLO
+  DEP_FILE = CMakeFiles/HELLO.dir/Core/Shape/Shape.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
-  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Shape
-
-build CMakeFiles/HELLO.dir/Editor/Input.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Editor/Input.cpp || cmake_object_order_depends_target_HELLO
-  DEP_FILE = CMakeFiles/HELLO.dir/Editor/Input.cpp.o.d
-  FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
-  OBJECT_DIR = CMakeFiles/HELLO.dir
-  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Editor
+  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core/Shape
 
 build CMakeFiles/HELLO.dir/Core/Camera.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Camera.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Core/Camera.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core
+
+build CMakeFiles/HELLO.dir/Core/Editor/Input.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Editor/Input.cpp || cmake_object_order_depends_target_HELLO
+  DEP_FILE = CMakeFiles/HELLO.dir/Core/Editor/Input.cpp.o.d
+  FLAGS = -g
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  OBJECT_DIR = CMakeFiles/HELLO.dir
+  OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core/Editor
 
 build CMakeFiles/HELLO.dir/Core/Player.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Player.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Core/Player.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core
 
 build CMakeFiles/HELLO.dir/Core/Type.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Type.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Core/Type.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core
 
 build CMakeFiles/HELLO.dir/Core/Window.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/Window.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Core/Window.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core
 
 build CMakeFiles/HELLO.dir/Core/World.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Core/World.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Core/World.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Core
 
 build CMakeFiles/HELLO.dir/Lib/Math.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4love/PROGRAM/cpp/OpenGL/Lib/Math.cpp || cmake_object_order_depends_target_HELLO
   DEP_FILE = CMakeFiles/HELLO.dir/Lib/Math.cpp.o.d
   FLAGS = -g
-  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
+  INCLUDES = -I/home/code4love/PROGRAM/cpp/OpenGL/external/glm -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/imgui -I/home/code4love/PROGRAM/cpp/OpenGL/vendor/stb_image -I/home/code4love/PROGRAM/cpp/OpenGL/test -I/home/code4love/PROGRAM/cpp/OpenGL/. -I/home/code4love/PROGRAM/cpp/OpenGL/Core/Shape -I/home/code4love/PROGRAM/cpp/OpenGL/Rendering -I/home/code4love/PROGRAM/cpp/OpenGL/external/glfw/include
   OBJECT_DIR = CMakeFiles/HELLO.dir
   OBJECT_FILE_DIR = CMakeFiles/HELLO.dir/Lib
 
@@ -239,7 +239,7 @@ build CMakeFiles/HELLO.dir/Lib/Math.cpp.o: CXX_COMPILER__HELLO_Debug /home/code4
 #############################################
 # Link the executable HELLO
 
-build HELLO: CXX_EXECUTABLE_LINKER__HELLO_Debug CMakeFiles/HELLO.dir/main.cpp.o CMakeFiles/HELLO.dir/Rendering/FrameBuffer.cpp.o CMakeFiles/HELLO.dir/Rendering/IndexBuffer.cpp.o CMakeFiles/HELLO.dir/Rendering/Renderer.cpp.o CMakeFiles/HELLO.dir/Rendering/Shader.cpp.o CMakeFiles/HELLO.dir/Rendering/Texture.cpp.o CMakeFiles/HELLO.dir/Rendering/VertexArray.cpp.o CMakeFiles/HELLO.dir/Rendering/VertexBuffer.cpp.o CMakeFiles/HELLO.dir/Rendering/WorldRenderer.cpp.o CMakeFiles/HELLO.dir/vendor/imgui/imgui.cpp.o CMakeFiles/HELLO.dir/vendor/imgui/imgui_demo.cpp.o CMakeFiles/HELLO.dir/vendor/imgui/imgui_draw.cpp.o CMakeFiles/HELLO.dir/vendor/imgui/imgui_impl_glfw_gl3.cpp.o CMakeFiles/HELLO.dir/vendor/stb_image/stb_image.cpp.o CMakeFiles/HELLO.dir/Shape/Bead.cpp.o CMakeFiles/HELLO.dir/Shape/Cube.cpp.o CMakeFiles/HELLO.dir/Shape/Plane.cpp.o CMakeFiles/HELLO.dir/Shape/Ring.cpp.o CMakeFiles/HELLO.dir/Shape/Shape.cpp.o CMakeFiles/HELLO.dir/Editor/Input.cpp.o CMakeFiles/HELLO.dir/Core/Camera.cpp.o CMakeFiles/HELLO.dir/Core/Player.cpp.o CMakeFiles/HELLO.dir/Core/Type.cpp.o CMakeFiles/HELLO.dir/Core/Window.cpp.o CMakeFiles/HELLO.dir/Core/World.cpp.o CMakeFiles/HELLO.dir/Lib/Math.cpp.o | external/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so || external/glfw/src/libglfw3.a
+build HELLO: CXX_EXECUTABLE_LINKER__HELLO_Debug CMakeFiles/HELLO.dir/main.cpp.o CMakeFiles/HELLO.dir/Rendering/FrameBuffer.cpp.o CMakeFiles/HELLO.dir/Rendering/IndexBuffer.cpp.o CMakeFiles/HELLO.dir/Rendering/Renderer.cpp.o CMakeFiles/HELLO.dir/Rendering/Shader.cpp.o CMakeFiles/HELLO.dir/Rendering/Texture.cpp.o CMakeFiles/HELLO.dir/Rendering/VertexArray.cpp.o CMakeFiles/HELLO.dir/Rendering/VertexBuffer.cpp.o CMakeFiles/HELLO.dir/Rendering/WorldRenderer.cpp.o CMakeFiles/HELLO.dir/vendor/imgui/imgui.cpp.o CMakeFiles/HELLO.dir/vendor/imgui/imgui_demo.cpp.o CMakeFiles/HELLO.dir/vendor/imgui/imgui_draw.cpp.o CMakeFiles/HELLO.dir/vendor/imgui/imgui_impl_glfw_gl3.cpp.o CMakeFiles/HELLO.dir/vendor/stb_image/stb_image.cpp.o CMakeFiles/HELLO.dir/Core/Shape/Bead.cpp.o CMakeFiles/HELLO.dir/Core/Shape/Cube.cpp.o CMakeFiles/HELLO.dir/Core/Shape/Plane.cpp.o CMakeFiles/HELLO.dir/Core/Shape/Ring.cpp.o CMakeFiles/HELLO.dir/Core/Shape/Shape.cpp.o CMakeFiles/HELLO.dir/Core/Camera.cpp.o CMakeFiles/HELLO.dir/Core/Editor/Input.cpp.o CMakeFiles/HELLO.dir/Core/Player.cpp.o CMakeFiles/HELLO.dir/Core/Type.cpp.o CMakeFiles/HELLO.dir/Core/Window.cpp.o CMakeFiles/HELLO.dir/Core/World.cpp.o CMakeFiles/HELLO.dir/Lib/Math.cpp.o | external/glfw/src/libglfw3.a /usr/lib/x86_64-linux-gnu/libOpenGL.so /usr/lib/x86_64-linux-gnu/libGLX.so /usr/lib/x86_64-linux-gnu/libGLU.so /usr/lib/x86_64-linux-gnu/librt.a /usr/lib/x86_64-linux-gnu/libm.so || external/glfw/src/libglfw3.a
   FLAGS = -g
   LINK_LIBRARIES = external/glfw/src/libglfw3.a  -lGLEW  /usr/lib/x86_64-linux-gnu/libOpenGL.so  /usr/lib/x86_64-linux-gnu/libGLX.so  /usr/lib/x86_64-linux-gnu/libGLU.so  /usr/lib/x86_64-linux-gnu/librt.a  -lm  -ldl
   OBJECT_DIR = CMakeFiles/HELLO.dir

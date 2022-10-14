@@ -21,7 +21,7 @@ public:
 
     void RenderDepthMap();
 
-    void RenderShape(Shape &shape, const Shader &shader);
+    void RenderShape(core::Shape &shape, const Shader &shader);
 protected:
     std::unique_ptr<FrameBuffer> m_FrameBuffer;
     std::unique_ptr<VertexArray> m_VertexArray;

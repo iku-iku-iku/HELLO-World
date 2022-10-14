@@ -33,6 +33,6 @@ private:
     std::unique_ptr<Shader> m_SkyboxShader;
     std::unique_ptr<Texture> m_SkyboxTexture;
 
-    Cube m_SkyboxCube;
-    Bead m_Bead;
+    core::Cube m_SkyboxCube;
+    core::Bead m_Bead;
 };

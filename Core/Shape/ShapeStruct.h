@@ -24,3 +24,8 @@ struct MeshData
     unsigned int IndexCount;
 };
 
+struct AABB {
+    float XMin, XMax;
+    float YMin, YMax;
+    float ZMin, ZMax;
+};

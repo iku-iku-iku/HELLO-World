@@ -123,7 +123,7 @@ CStringList =count=<m_nCount>
 ; various string classes from MFC & ATL
 
 _com_error=<m_hresult,hr>
-_bstr_t=<m_Data->m_wstr,su> (<m_Data->m_RefCount,u>)
+_bstr_t=<m_MeshData->m_wstr,su> (<m_MeshData->m_RefCount,u>)
 _com_ptr_t<*>=<m_pInterface>
 _LARGE_INTEGER=<QuadPart>
 _ULARGE_INTEGER=<QuadPart>

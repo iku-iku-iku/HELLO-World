@@ -3,8 +3,8 @@ namespace glm
 	// -- Constructors --
 
 #	if GLM_CONFIG_DEFAULTED_DEFAULT_CTOR == GLM_DISABLE
-		template<typename T, qualifier Q>
-		GLM_FUNC_QUALIFIER GLM_CONSTEXPR mat<4, 3, T, Q>::mat()
+		template<typename T, qualifier K_Q>
+		GLM_FUNC_QUALIFIER GLM_CONSTEXPR mat<4, 3, T, K_Q>::mat()
 #			if GLM_CONFIG_CTOR_INIT == GLM_CTOR_INITIALIZER_LIST
 				: value{col_type(1, 0, 0), col_type(0, 1, 0), col_type(0, 0, 1), col_type(0, 0, 0)}
 #			endif

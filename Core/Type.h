@@ -93,11 +93,13 @@ namespace core {
             InvDirty = true;
             MatDirty = true;
         }
+
         void SetYawDirty() {
             YawDirty = true;
             InvDirty = true;
             MatDirty = true;
         }
+
         void SetRollDirty() {
             RollDirty = true;
             InvDirty = true;
@@ -168,5 +170,34 @@ namespace core {
         Matrix4f operator*(const Matrix4f &rhs) const { return GetMat() * rhs; }
 
         glm::vec4 operator*(const glm::vec4 &rhs) const { return GetMat() * rhs; }
+    };
+
+    struct Transform {
+        glm::vec3 Translation{0.f, 0.f, 0.f};
+        glm::vec3 Rotation{0.f, 0.f, 0.f};
+        glm::vec3 Scale{1.f, 1.f, 1.f};
+
+        void AddTranslation(const glm::vec3 &vec) { Translation += vec; }
+
+        void AddTranslation(float dx, float dy, float dz) {
+            AddTranslation({dx, dy, dz});
+        }
+
+        void SetScale(glm::vec3 vec) { Scale = vec; }
+
+        void SetScale(float x, float y, float z) { SetScale({x, y, z}); }
+
+        glm::mat4 GetModelMatrix() const {
+            glm::mat4 model = glm::mat4(1.f);
+            model *= glm::translate(glm::mat4(1.f), Translation);
+
+            model *= glm::rotate(glm::mat4(1.f), Rotation.z, glm::vec3(0.f, 0.f, 1.f));
+            model *= glm::rotate(glm::mat4(1.f), Rotation.y, glm::vec3(0.f, 1.f, 0.f));
+            model *= glm::rotate(glm::mat4(1.f), Rotation.x, glm::vec3(1.f, 0.f, 0.f));
+
+            model *= glm::scale(glm::mat4(1.f), Scale);
+
+            return model;
+        }
     };
 };

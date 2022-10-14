@@ -142,12 +142,12 @@ namespace detail
 			return IsNotNull ? int(Result) : -1;
 		}
 
-		template<length_t L, typename T, qualifier Q>
-		struct compute_findMSB_vec<L, T, Q, 32>
+		template<length_t L, typename T, qualifier K_Q>
+		struct compute_findMSB_vec<L, T, K_Q, 32>
 		{
-			GLM_FUNC_QUALIFIER static vec<L, int, Q> call(vec<L, T, Q> const& x)
+			GLM_FUNC_QUALIFIER static vec<L, int, K_Q> call(vec<L, T, K_Q> const& x)
 			{
-				return detail::functor1<vec, L, int, T, Q>::call(compute_findMSB_32, x);
+				return detail::functor1<vec, L, int, T, K_Q>::call(compute_findMSB_32, x);
 			}
 		};
 
@@ -160,12 +160,12 @@ namespace detail
 			return IsNotNull ? int(Result) : -1;
 		}
 
-		template<length_t L, typename T, qualifier Q>
-		struct compute_findMSB_vec<L, T, Q, 64>
+		template<length_t L, typename T, qualifier K_Q>
+		struct compute_findMSB_vec<L, T, K_Q, 64>
 		{
-			GLM_FUNC_QUALIFIER static vec<L, int, Q> call(vec<L, T, Q> const& x)
+			GLM_FUNC_QUALIFIER static vec<L, int, K_Q> call(vec<L, T, K_Q> const& x)
 			{
-				return detail::functor1<vec, L, int, T, Q>::call(compute_findMSB_64, x);
+				return detail::functor1<vec, L, int, T, K_Q>::call(compute_findMSB_64, x);
 			}
 		};
 #		endif

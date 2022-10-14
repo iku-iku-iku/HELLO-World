@@ -118,7 +118,7 @@ void ImGui::ShowUserGuide()
     ImGui::BulletText("CTRL+A or double-click to select all.");
     ImGui::BulletText("CTRL+X,CTRL+C,CTRL+V to use clipboard.");
     ImGui::BulletText("CTRL+Z,CTRL+Y to undo/redo.");
-    ImGui::BulletText("ESCAPE to revert.");
+    ImGui::BulletText("K_ESCAPE to revert.");
     ImGui::BulletText("You can apply arithmetic operators +,*,/ on numerical values.\nUse +- to subtract.");
     ImGui::Unindent();
 }
@@ -338,7 +338,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
                 static int i0 = 123;
                 static float f0 = 0.001f;
                 ImGui::InputText("input text", str0, IM_ARRAYSIZE(str0));
-                ImGui::SameLine(); ShowHelpMarker("Hold SHIFT or use mouse to select text.\n" "CTRL+Left/Right to word jump.\n" "CTRL+A or double-click to select all.\n" "CTRL+X,CTRL+C,CTRL+V clipboard.\n" "CTRL+Z,CTRL+Y undo/redo.\n" "ESCAPE to revert.\n");
+                ImGui::SameLine(); ShowHelpMarker("Hold SHIFT or use mouse to select text.\n" "CTRL+Left/Right to word jump.\n" "CTRL+A or double-click to select all.\n" "CTRL+X,CTRL+C,CTRL+V clipboard.\n" "CTRL+Z,CTRL+Y undo/redo.\n" "K_ESCAPE to revert.\n");
 
                 ImGui::InputInt("input int", &i0);
                 ImGui::SameLine(); ShowHelpMarker("You can apply arithmetic operators +,*,/ on numerical values.\n  e.g. [ 100 ], input \'*2\', result becomes [ 200 ]\nUse +- to subtract.\n");

@@ -18,7 +18,6 @@ namespace core
     void World::PreInit()
     {
         m_Window = std::make_unique<Window>();
-        if (!m_Window->IsValid) { ERROR("fail to init window") }
 
         SUCCEED("PreInit")
     }
@@ -38,7 +37,8 @@ namespace core
     {
         m_ShapeVec.emplace_back(std::make_unique<Ring>());
         m_ShapeVec.emplace_back(std::make_unique<Plane>());
-        
+
+
         SUCCEED("PostInit")
     }
 
@@ -47,6 +47,7 @@ namespace core
         Editor::ProcessInput(m_Window->GetWindow());
         OnRender();
         m_Window->Update();
+
     }
 
     void World::OnRender()

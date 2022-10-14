@@ -47,18 +47,18 @@ namespace glm
 				T r;
 				T s;
 
-				typename detail::storage<1, T, detail::is_aligned<Q>::value>::type data;
+				typename detail::storage<1, T, detail::is_aligned<K_Q>::value>::type data;
 /*
 #				if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_OPERATOR
-					_GLM_SWIZZLE1_2_MEMBERS(T, Q, x)
-					_GLM_SWIZZLE1_2_MEMBERS(T, Q, r)
-					_GLM_SWIZZLE1_2_MEMBERS(T, Q, s)
-					_GLM_SWIZZLE1_3_MEMBERS(T, Q, x)
-					_GLM_SWIZZLE1_3_MEMBERS(T, Q, r)
-					_GLM_SWIZZLE1_3_MEMBERS(T, Q, s)
-					_GLM_SWIZZLE1_4_MEMBERS(T, Q, x)
-					_GLM_SWIZZLE1_4_MEMBERS(T, Q, r)
-					_GLM_SWIZZLE1_4_MEMBERS(T, Q, s)
+					_GLM_SWIZZLE1_2_MEMBERS(T, K_Q, x)
+					_GLM_SWIZZLE1_2_MEMBERS(T, K_Q, r)
+					_GLM_SWIZZLE1_2_MEMBERS(T, K_Q, s)
+					_GLM_SWIZZLE1_3_MEMBERS(T, K_Q, x)
+					_GLM_SWIZZLE1_3_MEMBERS(T, K_Q, r)
+					_GLM_SWIZZLE1_3_MEMBERS(T, K_Q, s)
+					_GLM_SWIZZLE1_4_MEMBERS(T, K_Q, x)
+					_GLM_SWIZZLE1_4_MEMBERS(T, K_Q, r)
+					_GLM_SWIZZLE1_4_MEMBERS(T, K_Q, s)
 #				endif
 */
 			};
@@ -66,7 +66,7 @@ namespace glm
 			union {T x, r, s;};
 /*
 #			if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_FUNCTION
-				GLM_SWIZZLE_GEN_VEC_FROM_VEC1(T, Q)
+				GLM_SWIZZLE_GEN_VEC_FROM_VEC1(T, K_Q)
 #			endif
 */
 #		endif
@@ -121,7 +121,7 @@ namespace glm
 /*
 #		if GLM_CONFIG_SWIZZLE == GLM_SWIZZLE_OPERATOR
 			template<int E0>
-			GLM_FUNC_DECL GLM_CONSTEXPR vec(detail::_swizzle<1, T, Q, E0, -1,-2,-3> const& that)
+			GLM_FUNC_DECL GLM_CONSTEXPR vec(detail::_swizzle<1, T, K_Q, E0, -1,-2,-3> const& that)
 			{
 				*this = that();
 			}

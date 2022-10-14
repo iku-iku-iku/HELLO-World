@@ -79,7 +79,7 @@
    - CTRL+A our Double-Click to select all.
    - CTRL+X,CTRL+C,CTRL+V to use OS clipboard/
    - CTRL+Z,CTRL+Y to undo/redo.
-   - ESCAPE to revert text to its original value.
+   - K_ESCAPE to revert text to its original value.
    - You can apply arithmetic operators +,*,/ on numerical values. Use +- to subtract (because - would set a negative value!)
    - Controls are automatically adjusted for OSX to match standard OSX text editing operations.
  - General Keyboard controls: enable with ImGuiConfigFlags_NavEnableKeyboard.
@@ -419,7 +419,7 @@
  FREQUENTLY ASKED QUESTIONS (FAQ), TIPS
  ======================================
 
- Q: How can I tell whether to dispatch mouse/keyboard to imgui or to my application?
+ K_Q: How can I tell whether to dispatch mouse/keyboard to imgui or to my application?
  A: You can read the 'io.WantCaptureMouse', 'io.WantCaptureKeyboard' and 'io.WantTextInput' flags from the ImGuiIO structure. 
     - When 'io.WantCaptureMouse' is set, imgui wants to use your mouse state, and you may want to discard/hide the inputs from the rest of your application.
     - When 'io.WantCaptureKeyboard' is set, imgui wants to use your keyboard state, and you may want to discard/hide the inputs from the rest of your application.
@@ -434,7 +434,7 @@
      have 'io.WantCaptureKeyboard=false'. Depending on your application logic it may or not be inconvenient. You might want to track which key-downs
      were targetted for Dear ImGui, e.g. with an array of bool, and filter out the corresponding key-ups.)
 
- Q: How can I display an image? What is ImTextureID, how does it works?
+ K_Q: How can I display an image? What is ImTextureID, how does it works?
  A: ImTextureID is a void* used to pass renderer-agnostic texture references around until it hits your render function.
     Dear ImGui knows nothing about what those bits represent, it just passes them around. It is up to you to decide what you want the void* to carry!
     It could be an identifier to your OpenGL texture (cast GLuint to void*), a pointer to your custom engine material (cast MyMaterial* to void*), etc.
@@ -446,7 +446,7 @@
     You may call ImGui::ShowMetricsWindow() to explore active draw lists and visualize/understand how the draw data is generated.
     It is your responsibility to get textures uploaded to your GPU.
 
- Q: How can I have multiple widgets with the same label or without a label? 
+ K_Q: How can I have multiple widgets with the same label or without a label?
  A: A primer on labels and the ID Stack...
 
    - Elements that are typically not clickable, such as Text() items don't need an ID.
@@ -548,7 +548,7 @@
       e.g. when displaying a list of objects, using indices or pointers as ID will preserve the 
        node open/closed state differently. See what makes more sense in your situation!
 
- Q: How can I load a different font than the default?
+ K_Q: How can I load a different font than the default?
  A: Use the font atlas to load the TTF/OTF file you want:
       ImGuiIO& io = ImGui::GetIO();
       io.Fonts->AddFontFromFileTTF("myfontfile.ttf", size_in_pixels);
@@ -561,12 +561,12 @@
       io.Fonts->AddFontFromFileTTF("MyDataFolder\\MyFontFile.ttf", size_in_pixels);  // CORRECT
       io.Fonts->AddFontFromFileTTF("MyDataFolder/MyFontFile.ttf", size_in_pixels);   // ALSO CORRECT
 
- Q: How can I easily use icons in my application?
+ K_Q: How can I easily use icons in my application?
  A: The most convenient and practical way is to merge an icon font such as FontAwesome inside you
     main font. Then you can refer to icons within your strings. Read 'How can I load multiple fonts?' 
     and the file 'misc/fonts/README.txt' for instructions and useful header files.
 
- Q: How can I load multiple fonts?
+ K_Q: How can I load multiple fonts?
  A: Use the font atlas to pack them into a single texture:
     (Read misc/fonts/README.txt and the code in ImFontAtlas for more details.)
 
@@ -594,7 +594,7 @@
       io.Fonts->LoadFromFileTTF("fontawesome-webfont.ttf", 16.0f, &config, ranges); // Merge icon font
       io.Fonts->LoadFromFileTTF("myfontfile.ttf", size_pixels, NULL, &config, io.Fonts->GetGlyphRangesJapanese()); // Merge japanese glyphs
 
- Q: How can I display and input non-Latin characters such as Chinese, Japanese, Korean, Cyrillic?
+ K_Q: How can I display and input non-Latin characters such as Chinese, Japanese, Korean, Cyrillic?
  A: When loading a font, pass custom Unicode ranges to specify the glyphs to load. 
 
       // Add default Japanese ranges
@@ -620,21 +620,21 @@
     io.ImeWindowHandle field. The default implementation of io.ImeSetInputScreenPosFn() will set
     your Microsoft IME position correctly.
 
- Q: How can I use the drawing facilities without an ImGui window? (using ImDrawList API)
+ K_Q: How can I use the drawing facilities without an ImGui window? (using ImDrawList API)
  A: - You can create a dummy window. Call SetNextWindowBgAlpha(0.0f), call Begin() with NoTitleBar|NoResize|NoMove|NoScrollbar|NoSavedSettings|NoInputs flags. 
       Then you can retrieve the ImDrawList* via GetWindowDrawList() and draw to it in any way you like.
     - You can call ImGui::GetOverlayDrawList() and use this draw list to display contents over every other imgui windows.
     - You can create your own ImDrawList instance. You'll need to initialize them ImGui::GetDrawListSharedData(), or create your own ImDrawListSharedData.
 
- Q: I integrated Dear ImGui in my engine and the text or lines are blurry..
+ K_Q: I integrated Dear ImGui in my engine and the text or lines are blurry..
  A: In your Render function, try translating your projection matrix by (0.5f,0.5f) or (0.375f,0.375f).
     Also make sure your orthographic projection matrix and io.DisplaySize matches your actual framebuffer dimension.
 
- Q: I integrated Dear ImGui in my engine and some elements are clipping or disappearing when I move windows around..
+ K_Q: I integrated Dear ImGui in my engine and some elements are clipping or disappearing when I move windows around..
  A: You are probably mishandling the clipping rectangles in your render function. 
     Rectangles provided by ImGui are defined as (x1=left,y1=top,x2=right,y2=bottom) and NOT as (x1,y1,width,height).
 
- Q: How can I help?
+ K_Q: How can I help?
  A: - If you are experienced with Dear ImGui and C++, look at the github issues, or TODO.txt and see how you want/can help!
     - Convince your company to fund development time! Individual users: you can also become a Patron (patreon.com/imgui) or donate on PayPal! See README.
     - Disclose your usage of dear imgui via a dev blog post, a tweet, a screenshot, a mention somewhere etc. 

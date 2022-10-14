@@ -118,8 +118,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="keyword">static</span> length_t <span class="keyword">const</span> rows = 0;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        };</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">template</span>&lt;length_t L, <span class="keyword">typename</span> T, qualifier Q&gt;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">struct </span>type&lt;vec&lt;L, T, Q&gt; &gt;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">template</span>&lt;length_t L, <span class="keyword">typename</span> T, qualifier K_Q&gt;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keyword">struct </span>type&lt;vec&lt;L, T, K_Q&gt; &gt;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">bool</span> <span class="keyword">const</span> is_vec = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">bool</span> <span class="keyword">const</span> is_mat = <span class="keyword">false</span>;</div>
@@ -127,8 +127,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keyword">static</span> length_t <span class="keyword">const</span> components = L;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        };</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">template</span>&lt;length_t C, length_t R, <span class="keyword">typename</span> T, qualifier Q&gt;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">struct </span>type&lt;mat&lt;C, R, T, Q&gt; &gt;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">template</span>&lt;length_t C, length_t R, <span class="keyword">typename</span> T, qualifier K_Q&gt;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <span class="keyword">struct </span>type&lt;mat&lt;C, R, T, K_Q&gt; &gt;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        {</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">bool</span> <span class="keyword">const</span> is_vec = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">bool</span> <span class="keyword">const</span> is_mat = <span class="keyword">true</span>;</div>
@@ -138,8 +138,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keyword">static</span> length_t <span class="keyword">const</span> rows = R;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        };</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, qualifier Q&gt;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">struct </span>type&lt;qua&lt;T, Q&gt; &gt;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, qualifier K_Q&gt;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">struct </span>type&lt;qua&lt;T, K_Q&gt; &gt;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        {</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">bool</span> <span class="keyword">const</span> is_vec = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">bool</span> <span class="keyword">const</span> is_mat = <span class="keyword">false</span>;</div>
@@ -147,8 +147,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keyword">static</span> length_t <span class="keyword">const</span> components = 4;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        };</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, qualifier Q&gt;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">struct </span>type&lt;tdualquat&lt;T, Q&gt; &gt;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">template</span>&lt;<span class="keyword">typename</span> T, qualifier K_Q&gt;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">struct </span>type&lt;tdualquat&lt;T, K_Q&gt; &gt;</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        {</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">bool</span> <span class="keyword">const</span> is_vec = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keyword">static</span> <span class="keywordtype">bool</span> <span class="keyword">const</span> is_mat = <span class="keyword">false</span>;</div>

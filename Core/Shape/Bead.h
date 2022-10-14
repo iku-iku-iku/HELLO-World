@@ -6,13 +6,16 @@
 #define HELLO_BEAD_H
 
 
-#include "MeshData.h"
+#include "ShapeStruct.h"
 #include "Shape.h"
 
-class Bead : public Shape {
-public:
-    Bead();
-};
+namespace core {
 
+    class Bead : public Shape {
+    public:
+        Bead();
+    };
+
+}
 
 #endif //HELLO_BEAD_H

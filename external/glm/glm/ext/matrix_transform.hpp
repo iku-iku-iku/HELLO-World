@@ -57,8 +57,8 @@ namespace glm
 	/// // m[3][0] == 1.0f, m[3][1] == 1.0f, m[3][2] == 1.0f, m[3][3] == 1.0f
 	/// @endcode
 	///
-	/// @see - translate(mat<4, 4, T, Q> const& m, T x, T y, T z)
-	/// @see - translate(vec<3, T, Q> const& v)
+	/// @see - translate(mat<4, 4, T, K_Q> const& m, T x, T y, T z)
+	/// @see - translate(vec<3, T, K_Q> const& v)
 	/// @see <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glTranslate.xml">glTranslate man page</a>
 	template<typename T, qualifier Q>
 	GLM_FUNC_DECL mat<4, 4, T, Q> translate(
@@ -73,8 +73,8 @@ namespace glm
 	/// @tparam T A floating-point scalar type
 	/// @tparam Q A value from qualifier enum
 	///
-	/// @see - rotate(mat<4, 4, T, Q> const& m, T angle, T x, T y, T z)
-	/// @see - rotate(T angle, vec<3, T, Q> const& v)
+	/// @see - rotate(mat<4, 4, T, K_Q> const& m, T angle, T x, T y, T z)
+	/// @see - rotate(T angle, vec<3, T, K_Q> const& v)
 	/// @see <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glRotate.xml">glRotate man page</a>
 	template<typename T, qualifier Q>
 	GLM_FUNC_DECL mat<4, 4, T, Q> rotate(
@@ -88,8 +88,8 @@ namespace glm
 	/// @tparam T A floating-point scalar type
 	/// @tparam Q A value from qualifier enum
 	///
-	/// @see - scale(mat<4, 4, T, Q> const& m, T x, T y, T z)
-	/// @see - scale(vec<3, T, Q> const& v)
+	/// @see - scale(mat<4, 4, T, K_Q> const& m, T x, T y, T z)
+	/// @see - scale(vec<3, T, K_Q> const& v)
 	/// @see <a href="https://www.khronos.org/registry/OpenGL-Refpages/gl2.1/xhtml/glScale.xml">glScale man page</a>
 	template<typename T, qualifier Q>
 	GLM_FUNC_DECL mat<4, 4, T, Q> scale(
@@ -112,11 +112,11 @@ namespace glm
     /// @tparam T A floating-point shear type
     /// @tparam Q A value from qualifier enum
     ///
-    /// @see - shear(mat<4, 4, T, Q> const& m, T x, T y, T z)
-    /// @see - shear(vec<3, T, Q> const& p)
-    /// @see - shear(vec<2, T, Q> const& l_x)
-    /// @see - shear(vec<2, T, Q> const& l_y)
-    /// @see - shear(vec<2, T, Q> const& l_z)
+    /// @see - shear(mat<4, 4, T, K_Q> const& m, T x, T y, T z)
+    /// @see - shear(vec<3, T, K_Q> const& p)
+    /// @see - shear(vec<2, T, K_Q> const& l_x)
+    /// @see - shear(vec<2, T, K_Q> const& l_y)
+    /// @see - shear(vec<2, T, K_Q> const& l_z)
     /// @see no resource...
     template <typename T, qualifier Q>
     GLM_FUNC_QUALIFIER mat<4, 4, T, Q> shear(
