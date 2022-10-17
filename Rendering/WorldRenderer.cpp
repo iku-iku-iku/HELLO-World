@@ -1,8 +1,7 @@
-#include "Rendering/WorldRenderer.h"
-#include "glm/gtc/matrix_transform.hpp"
-#include "Texture.h"
+#include "WorldRenderer.h"
 #include "Core/World.h"
-#include "Core/Log.h"
+#include "stb_image.h"
+#include "glm/gtc/matrix_transform.hpp"
 
 namespace {
     float globalAmbient[4] = {0.7f, 0.7f, 0.7f, 1.0f};
@@ -21,8 +20,8 @@ WorldRenderer::WorldRenderer(core::World *inWorld) : m_World(inWorld) {
 }
 
 void WorldRenderer::Init() {
-    m_UIShader = std::make_unique<Shader>("../shaders/ui.shader");
-    m_Shader2 = std::make_unique<Shader>("../shaders/test_shadow2.shader");
+    m_UIShader = std::make_unique<rhi::Shader>("../shaders/ui.shader");
+    m_Shader2 = std::make_unique<rhi::Shader>("../shaders/test_shadow2.shader");
 
     m_Shader2->SetUniform4fv("u_Light.ambient", lightAmbient);
     m_Shader2->SetUniform4fv("u_Light.diffuse", lightDiffuse);
@@ -43,8 +42,8 @@ void WorldRenderer::Init() {
             "../texture/back.jpg",
     };
     glEnable(GL_TEXTURE_CUBE_MAP_SEAMLESS);
-    m_SkyboxTexture = Texture::CreateCubeMap(map_path);
-    m_SkyboxShader = std::make_unique<Shader>("../shaders/skybox.shader");
+    m_SkyboxTexture = rhi::Texture::CreateCubeMap(map_path);
+    m_SkyboxShader = std::make_unique<rhi::Shader>("../shaders/skybox.shader");
     m_SkyboxShader->SetUniform1i("u_Texture", (int) m_SkyboxTexture->GetSlot());
     m_Shader2->SetUniform1i("shTex", (int) m_DepthMap->GetSlot());
 
@@ -93,8 +92,8 @@ void WorldRenderer::RenderSkybox() {
     m_SkyboxShader->Bind();
     glm::mat4 view = m_World->GetPlayerCamera()->GetView();
     glm::mat4 proj = m_World->GetPlayerCamera()->GetPerspectiveProjection();
-    auto no_translate = glm::mat4(glm::mat3(view));
-    glm::mat4 mv = no_translate * m_SkyboxCube.GetModelMatrix();
+    auto no_translate_view = glm::mat4(glm::mat3(view));
+    glm::mat4 mv = no_translate_view * m_SkyboxCube.GetModelMatrix();
     glm::mat4 mvp = proj * mv;
     m_SkyboxShader->SetUniformMat4f("u_MVP", mvp);
 
@@ -110,4 +109,9 @@ void WorldRenderer::RenderBead() {
     m_UIShader->SetUniformMat4f("u_MVP", mvp);
     m_UIShader->SetUniform4f("u_Color", 1.f, 0.f, 0.f, 1.f);
     RenderShape(m_Bead,*m_UIShader);
+}
+
+void WorldRenderer::RenderShape(core::Shape &shape, const Shader &shader) {
+    shape.SetData(*m_VertexBuffer, *m_IndexBuffer);
+    Render(shader);
 }

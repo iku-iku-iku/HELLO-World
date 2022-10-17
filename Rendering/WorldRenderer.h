@@ -1,9 +1,16 @@
 #pragma once
 
 #include <memory>
+#include <GL/glew.h>
+#include <string>
+#include <iostream>
+#include <unordered_map>
+#include <vector>
 #include "Cube.h"
 #include "Bead.h"
-#include "Renderer.h"
+#include "GraphicsAPI.h"
+#include "Core/Log.h"
+#include "glm/glm.hpp"
 
 namespace core {
 
@@ -17,6 +24,8 @@ public:
     ~WorldRenderer() = default;
 
     void OnRender();
+
+    void RenderShape(core::Shape &shape, const Shader &shader);
 
 private:
     void Init();

@@ -3,10 +3,6 @@
 //
 
 #include "Plane.h"
-#include "imgui.h"
-#include "glm/gtc/matrix_transform.hpp"
-#include "IndexBuffer.h"
-#include "VertexBuffer.h"
 
 namespace {
     float VertexData[] = {

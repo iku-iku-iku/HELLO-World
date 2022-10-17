@@ -3,17 +3,14 @@
 //
 
 #include "Shape.h"
-#include "glm/gtc/matrix_transform.hpp"
-#include "VertexBuffer.h"
-#include "IndexBuffer.h"
-#include "Core/Log.h"
+#include "OpenGLAPI.h"
 
 namespace core {
     glm::mat4 Shape::GetModelMatrix() const {
         return m_Transform.GetModelMatrix();
     }
 
-    void Shape::SetData(VertexBuffer &vb, IndexBuffer &ib) {
+    void Shape::SetData(rhi::VertexBuffer &vb, rhi::IndexBuffer &ib) {
         UpdateData();
         vb.SetData(m_MeshData.VertexData, m_MeshData.VertexDataSize);
         ib.SetData(m_MeshData.IndexData, m_MeshData.IndexCount);

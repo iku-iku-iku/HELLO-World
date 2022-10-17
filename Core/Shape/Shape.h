@@ -7,8 +7,7 @@
 #include "glm/glm.hpp"
 #include "ShapeStruct.h"
 #include "Core/Type.h"
-#include "IndexBuffer.h"
-#include "VertexBuffer.h"
+#include "GraphicsAPI.h"
 
 namespace core {
 

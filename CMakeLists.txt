@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.20.1)
 
-project(HELLO)
+project(HELLO-world)
 
 file(GLOB_RECURSE IMGUI vendor/imgui/*.cpp)
 file(GLOB_RECURSE RENDER Rendering/*.cpp)

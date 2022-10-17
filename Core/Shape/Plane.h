@@ -8,7 +8,6 @@
 #include <vector>
 #include "Shape.h"
 #include "glm/glm.hpp"
-#include "VertexBufferLayout.h"
 
 namespace core {
 
