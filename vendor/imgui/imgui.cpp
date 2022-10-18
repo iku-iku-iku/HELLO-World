@@ -616,7 +616,7 @@
 
     Text input: it is up to your application to pass the right character code by calling 
     io.AddInputCharacter(). The applications in examples/ are doing that. For languages relying 
-    on an Input Method Editor (IME), on Windows you can copy the Hwnd of your application in the
+    on an Input Method editor (IME), on Windows you can copy the Hwnd of your application in the
     io.ImeWindowHandle field. The default implementation of io.ImeSetInputScreenPosFn() will set
     your Microsoft IME position correctly.
 
@@ -3511,7 +3511,7 @@ void ImGui::NewFrame()
 
     g.MouseCursor = ImGuiMouseCursor_Arrow;
     g.WantCaptureMouseNextFrame = g.WantCaptureKeyboardNextFrame = g.WantTextInputNextFrame = -1;
-    g.OsImePosRequest = ImVec2(1.0f, 1.0f); // OS Input Method Editor showing on top-left of our window by default
+    g.OsImePosRequest = ImVec2(1.0f, 1.0f); // OS Input Method editor showing on top-left of our window by default
 
     // Mouse wheel scrolling, scale
     if (g.HoveredWindow && !g.HoveredWindow->Collapsed && (g.IO.MouseWheel != 0.0f || g.IO.MouseWheelH != 0.0f))
@@ -3996,7 +3996,7 @@ void ImGui::EndFrame()
     if (g.FrameCountEnded == g.FrameCount)          // Don't process EndFrame() multiple times.
         return;
 
-    // Notify OS when our Input Method Editor cursor has moved (e.g. CJK inputs using Microsoft IME)
+    // Notify OS when our Input Method editor cursor has moved (e.g. CJK inputs using Microsoft IME)
     if (g.IO.ImeSetInputScreenPosFn && ImLengthSqr(g.OsImePosRequest - g.OsImePosSet) > 0.0001f)
     {
         g.IO.ImeSetInputScreenPosFn((int)g.OsImePosRequest.x, (int)g.OsImePosRequest.y);
@@ -13166,7 +13166,7 @@ static void SetClipboardTextFn_DefaultImpl(void*, const char* text)
 
 static void ImeSetInputScreenPosFn_DefaultImpl(int x, int y)
 {
-    // Notify OS Input Method Editor of text input position
+    // Notify OS Input Method editor of text input position
     if (HWND hwnd = (HWND)GImGui->IO.ImeWindowHandle)
         if (HIMC himc = ImmGetContext(hwnd))
         {

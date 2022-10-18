@@ -4,9 +4,9 @@
 
 #include <iostream>
 #include <stdlib.h>
-#include "Core/Log.h"
+#include "core/Log.h"
 #include "Player.h"
-#include "World.h"
+#include "world/World.h"
 
 core::Player::~Player() {
     if (Editor::OnInput().RemoveListener(InputKey)) {
@@ -117,13 +117,13 @@ void core::Player::InputKeyHandler(const Editor::InputContext &inputContext) {
 }
 
 void core::Player::RayTrace() {
-    const auto &m_ShapeVec = world.GetShapes();
+    const auto &m_ShapeVec = world->GetShapes();
     for (const auto &item: m_ShapeVec) { item->GenerateAABB(); }
     auto Camera = GetCamera();
     for (const auto &item: m_ShapeVec) {
         if (item->IntersectWithRay(Camera->GetTranslation(), Camera->GetDirection())) {
             AABB aabb = item->GetAABB();
-            SetChosenShape(item.get());
+            SetChosenShape(item);
         }
     }
 }

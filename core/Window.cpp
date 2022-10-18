@@ -1,6 +1,6 @@
-#include "Core/Log.h"
+#include "core/Log.h"
 #include <GLFW/glfw3.h>
-#include "Core/Window.h"
+#include "core/Window.h"
 
 namespace core {
     Window::Window() {
@@ -43,7 +43,7 @@ namespace core {
         InitWindow(m_Window);
 
         GetFrameBufferSize(w, h);
-        SUCCEED("Init Window, Width: %d, Height: %d", w, h)
+        SUCCEED("Window Init, Width: %d, Height: %d", w, h)
     }
 
     void Window::GetFrameBufferSize(int &width, int &height) const {

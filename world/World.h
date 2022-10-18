@@ -7,15 +7,13 @@
 #include "WorldRenderer.h"
 #include <vector>
 #include <memory>
-#include "Camera.h"
-#include "Player.h"
-#include "Core/Window.h"
+#include "core/Camera.h"
+#include "core/Player.h"
+#include "core/Window.h"
 #include "Shape.h"
 
-namespace core
-{
-    class World
-    {
+namespace core {
+    class World {
     public:
         World();
 
@@ -29,8 +27,14 @@ namespace core
 
         void Update();
 
-        const std::vector<std::unique_ptr<Shape>>&
-        GetShapes() const {return m_ShapeVec;}
+        const std::vector<Shape *> &
+        GetShapes() const { return m_ShapeVec; }
+
+        void RemoveShape(Shape *shape) { std::remove(m_ShapeVec.begin(), m_ShapeVec.end(), shape); }
+
+        void AddShape(Shape *shape) {
+            m_ShapeVec.push_back(shape);
+        }
 
     private:
         std::vector<std::unique_ptr<Camera>> m_Cameras;
@@ -49,8 +53,8 @@ namespace core
 
         std::unique_ptr<WorldRenderer> m_WorldRenderer;
 
-        std::vector<std::unique_ptr<Shape>> m_ShapeVec;
+        std::vector<Shape *> m_ShapeVec;
     };
 }
 
-extern core::World world;
+extern core::World *world;

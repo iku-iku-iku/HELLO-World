@@ -5,7 +5,7 @@
 
 #pragma once
 
-#include "Editor/Input.h"
+#include "editor/Input.h"
 #include "Camera.h"
 #include "Shape.h"
 

@@ -8,7 +8,7 @@
 
 #include <functional>
 #include <vector>
-#include "Editor/Input.h"
+#include "editor/Input.h"
 
 namespace core {
     template<typename ArgT>

@@ -1,5 +1,5 @@
 #include "WorldRenderer.h"
-#include "Core/World.h"
+#include "world/World.h"
 #include "stb_image.h"
 #include "glm/gtc/matrix_transform.hpp"
 
@@ -47,7 +47,7 @@ void WorldRenderer::Init() {
     m_SkyboxShader->SetUniform1i("u_Texture", (int) m_SkyboxTexture->GetSlot());
     m_Shader2->SetUniform1i("shTex", (int) m_DepthMap->GetSlot());
 
-    SUCCEED("Init WorldRender")
+    SUCCEED("WorldRender Init")
 }
 
 void WorldRenderer::OnRender() {
@@ -68,7 +68,7 @@ void WorldRenderer::OnRender() {
         glm::mat4 mv = view * shape->GetModelMatrix();
         glm::mat4 mvp = proj * mv;
 
-        glm::mat4 lightProj = world.GetPlayerCamera()->GetPerspectiveProjection();
+        glm::mat4 lightProj = world->GetPlayerCamera()->GetPerspectiveProjection();
         glm::mat4 lightView = glm::lookAt(glm::vec3(lightPos[0], lightPos[1], lightPos[2]), glm::vec3(0.f, 0.f, 0.f),
                                           glm::vec3(0.f, 1.f, 0.f));
 

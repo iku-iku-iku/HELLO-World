@@ -35,7 +35,7 @@ var searchData=
   ['convertlinearsrgbtod65xyz',['convertLinearSRGBToD65XYZ',['../a00311.html#gaf9e130d9d4ccf51cc99317de7449f369',1,'glm']]],
   ['convertlineartosrgb',['convertLinearToSRGB',['../a00289.html#ga42239e7b3da900f7ef37cec7e2476579',1,'glm::convertLinearToSRGB(vec&lt; L, T, Q &gt; const &amp;ColorLinear)'],['../a00289.html#gaace0a21167d13d26116c283009af57f6',1,'glm::convertLinearToSRGB(vec&lt; L, T, Q &gt; const &amp;ColorLinear, T Gamma)']]],
   ['convertsrgbtolinear',['convertSRGBToLinear',['../a00289.html#ga16c798b7a226b2c3079dedc55083d187',1,'glm::convertSRGBToLinear(vec&lt; L, T, Q &gt; const &amp;ColorSRGB)'],['../a00289.html#gad1b91f27a9726c9cb403f9fee6e2e200',1,'glm::convertSRGBToLinear(vec&lt; L, T, Q &gt; const &amp;ColorSRGB, T Gamma)']]],
-  ['core_20features',['Core features',['../a00280.html',1,'']]],
+  ['core_20features',['core features',['../a00280.html',1,'']]],
   ['common_20functions',['Common functions',['../a00241.html',1,'']]],
   ['cos',['cos',['../a00373.html#ga6a41efc740e3b3c937447d3a6284130e',1,'glm']]],
   ['cosh',['cosh',['../a00373.html#ga4e260e372742c5f517aca196cf1e62b3',1,'glm']]],

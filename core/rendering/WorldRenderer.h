@@ -9,7 +9,7 @@
 #include "Cube.h"
 #include "Bead.h"
 #include "GraphicsAPI.h"
-#include "Core/Log.h"
+#include "core/Log.h"
 #include "glm/glm.hpp"
 
 namespace core {

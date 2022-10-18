@@ -19,7 +19,7 @@ namespace core
     {
         m_Window = std::make_unique<Window>();
 
-        SUCCEED("PreInit")
+        SUCCEED("World PreInit")
     }
 
     void World::Init()
@@ -35,11 +35,11 @@ namespace core
 
     void World::PostInit()
     {
-        m_ShapeVec.emplace_back(std::make_unique<Ring>());
-        m_ShapeVec.emplace_back(std::make_unique<Plane>());
+//        m_ShapeVec.emplace_back(std::make_unique<Ring>());
+//        m_ShapeVec.emplace_back(std::make_unique<Plane>());
 
 
-        SUCCEED("PostInit")
+        SUCCEED("World PostInit")
     }
 
     void World::Update()

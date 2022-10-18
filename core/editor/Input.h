@@ -7,7 +7,7 @@
 
 #include <functional>
 #include <unordered_set>
-#include "Core/Event.h"
+#include "core/Event.h"
 
 class GLFWwindow;
 namespace Editor {

@@ -4,10 +4,10 @@
 
 #include <fstream>
 #include "OpenGLAPI.h"
-#include "Core/Log.h"
+#include "core/Log.h"
 #include <sstream>
 #include "stb_image.h"
-#include "Core/World.h"
+#include "world/World.h"
 #include "WorldRenderer.h"
 
 namespace rhi {
@@ -101,7 +101,7 @@ namespace rhi {
         auto p = std::make_unique<rhi::Texture>(GL_TEXTURE_2D);
 
         int screenSizeX, screenSizeY;
-        world.GetWindow()->GetFrameBufferSize(screenSizeX, screenSizeY);
+        world->GetWindow()->GetFrameBufferSize(screenSizeX, screenSizeY);
         glTexImage2D(p->TexType, 0, GL_DEPTH_COMPONENT, screenSizeX, screenSizeY, 0, GL_DEPTH_COMPONENT, GL_FLOAT,
                      nullptr);
         glTexParameteri(p->TexType, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
@@ -449,7 +449,7 @@ void rhi::Renderer::RenderDepthMap() {
     m_FrameBuffer->Bind();
     m_FrameBuffer->ClearDepthBuffer();
 
-    glm::mat4 lightProj = world.GetPlayerCamera()->GetPerspectiveProjection();
+    glm::mat4 lightProj = world->GetPlayerCamera()->GetPerspectiveProjection();
     glm::mat4 lightView = glm::lookAt(glm::vec3(lightPos[0], lightPos[1], lightPos[2]), glm::vec3(0.f, 0.f, 0.f),
                                       glm::vec3(0.f, 1.f, 0.f));
 
@@ -462,7 +462,7 @@ void rhi::Renderer::RenderDepthMap() {
         glm::mat4 view = lightView;
         glm::mat4 proj = lightProj;
 
-        for (const auto &shape: world.GetShapes()) {
+        for (const auto &shape: world->GetShapes()) {
             shape->SetData(*m_VertexBuffer, *m_IndexBuffer);
             glm::mat4 mvp = proj * view * shape->GetModelMatrix();
             m_DepthRenderingShader->SetUniformMat4f("u_MVP", mvp);
@@ -486,6 +486,6 @@ void rhi::Renderer::InitOpenGLEnv() {
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
 
-    SUCCEED("Init OpenGL Environment")
+    SUCCEED("OpenGL Environment Init")
 }
 

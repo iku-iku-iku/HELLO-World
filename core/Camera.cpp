@@ -5,8 +5,8 @@
 #include "Camera.h"
 #include "glm/gtc/matrix_transform.hpp"
 #include "imgui.h"
-#include "Core/Window.h"
-#include "Core/World.h"
+#include "core/Window.h"
+#include "world/World.h"
 
 namespace core {
     void Camera::OnImGuiRender() {
@@ -30,10 +30,10 @@ namespace core {
 
     Camera::Camera() {
         int width, height;
-        world.GetWindow()->GetFrameBufferSize(width, height);
+        world->GetWindow()->GetFrameBufferSize(width, height);
         SetPerspectiveProjection(1.3f, (float) width / (float) height, .1f, 100.f);
 
-        float widthHeightRatio = world.GetWindow()->GetWidthHeightRatio();
+        float widthHeightRatio = world->GetWindow()->GetWidthHeightRatio();
         SetOrthographicProjection(-5.f * widthHeightRatio, 5.f * widthHeightRatio, -5.f, 5.f);
         SetTranslation(0.f, 1.f, 5.f);
     }

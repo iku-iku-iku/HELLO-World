@@ -156,7 +156,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
     if (show_app_custom_rendering)    ShowExampleAppCustomRendering(&show_app_custom_rendering);
 
     if (show_app_metrics)             { ImGui::ShowMetricsWindow(&show_app_metrics); }
-    if (show_app_style_editor)        { ImGui::Begin("Style Editor", &show_app_style_editor); ImGui::ShowStyleEditor(); ImGui::End(); }
+    if (show_app_style_editor)        { ImGui::Begin("Style editor", &show_app_style_editor); ImGui::ShowStyleEditor(); ImGui::End(); }
     if (show_app_about)
     {
         ImGui::Begin("About Dear ImGui", &show_app_about, ImGuiWindowFlags_AlwaysAutoResize);
@@ -226,7 +226,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
         if (ImGui::BeginMenu("Help"))
         {
             ImGui::MenuItem("Metrics", NULL, &show_app_metrics);
-            ImGui::MenuItem("Style Editor", NULL, &show_app_style_editor);
+            ImGui::MenuItem("Style editor", NULL, &show_app_style_editor);
             ImGui::MenuItem("About Dear ImGui", NULL, &show_app_about);
             ImGui::EndMenu();
         }
@@ -679,7 +679,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
                 for (int n = 0; n < 5; n++)
                 {
                     char buf[32];
-                    sprintf(buf, "Object %d", n);
+                    sprintf(buf, "object %d", n);
                     if (ImGui::Selectable(buf, selected == n)) 
                         selected = n;
                 }
@@ -692,7 +692,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
                 for (int n = 0; n < 5; n++)
                 {
                     char buf[32];
-                    sprintf(buf, "Object %d", n);
+                    sprintf(buf, "object %d", n);
                     if (ImGui::Selectable(buf, selection[n]))
                     {
                         if (!ImGui::GetIO().KeyCtrl)    // Clear selection when CTRL is not held
@@ -702,7 +702,7 @@ void ImGui::ShowDemoWindow(bool* p_open)
                 }
                 ImGui::TreePop();
             }
-            if (ImGui::TreeNode("Rendering more text into the same line"))
+            if (ImGui::TreeNode("rendering more text into the same line"))
             {
                 // Using the Selectable() override that takes "bool* p_selected" parameter and toggle your booleans automatically.
                 static bool selected[3] = { false, false, false };
@@ -2132,7 +2132,7 @@ void ImGui::ShowStyleEditor(ImGuiStyle* ref)
     ImGui::SameLine();
     ShowHelpMarker("Save/Revert in local non-persistent storage. Default Colors definition are not affected. Use \"Export Colors\" below to save them somewhere.");
 
-    if (ImGui::TreeNode("Rendering"))
+    if (ImGui::TreeNode("rendering"))
     {
         ImGui::Checkbox("Anti-aliased lines", &style.AntiAliasedLines); ImGui::SameLine(); ShowHelpMarker("When disabling anti-aliasing lines, you'll probably want to disable borders in your style as well.");
         ImGui::Checkbox("Anti-aliased fill", &style.AntiAliasedFill);
@@ -3078,7 +3078,7 @@ static void ShowExampleAppPropertyEditor(bool* p_open)
         {
             ImGui::PushID(uid);                      // Use object uid as identifier. Most commonly you could also use the object pointer as a base ID.
             ImGui::AlignTextToFramePadding();  // Text and Tree nodes are less high than regular widgets, here we add vertical spacing to make the tree lines equal high.
-            bool node_open = ImGui::TreeNode("Object", "%s_%u", prefix, uid);
+            bool node_open = ImGui::TreeNode("object", "%s_%u", prefix, uid);
             ImGui::NextColumn();
             ImGui::AlignTextToFramePadding();
             ImGui::Text("my sailor is rich");
@@ -3121,7 +3121,7 @@ static void ShowExampleAppPropertyEditor(bool* p_open)
 
     // Iterate dummy objects with dummy members (all the same data)
     for (int obj_i = 0; obj_i < 3; obj_i++)
-        funcs::ShowDummyObject("Object", obj_i);
+        funcs::ShowDummyObject("object", obj_i);
 
     ImGui::Columns(1);
     ImGui::Separator();

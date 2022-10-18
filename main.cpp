@@ -1,8 +1,7 @@
-#include "Core/World.h"
+#include "world/World.h"
 
-core::World world;
 int main()
 {
-    while (world.IsGoing()) {world.Update();}
+    while (world->IsGoing()) {world->Update();}
     return 0;
 }

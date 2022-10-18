@@ -10,7 +10,7 @@
 #include <iostream>
 #include <unordered_map>
 #include <vector>
-#include "Core/Log.h"
+#include "core/Log.h"
 #include "glm/glm.hpp"
 
 

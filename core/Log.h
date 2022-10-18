@@ -48,7 +48,7 @@ namespace core {
         puts("");
         fflush(stdout);
     }
-} // namespace Core
+} // namespace core
 
 #define GLCALL(x)   \
     GLClearError(); \

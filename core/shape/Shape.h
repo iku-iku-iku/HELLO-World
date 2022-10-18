@@ -6,7 +6,7 @@
 
 #include "glm/glm.hpp"
 #include "ShapeStruct.h"
-#include "Core/Type.h"
+#include "core/Type.h"
 #include "GraphicsAPI.h"
 
 namespace core {

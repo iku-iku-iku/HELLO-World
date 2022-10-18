@@ -3,13 +3,13 @@ cmake_minimum_required(VERSION 3.20.1)
 project(HELLO-world)
 
 file(GLOB_RECURSE IMGUI vendor/imgui/*.cpp)
-file(GLOB_RECURSE RENDER Rendering/*.cpp)
-file(GLOB_RECURSE SHAPE Core/Shape/*.cpp)
-file(GLOB_RECURSE Core/Editor Core/Editor/*.cpp)
-file(GLOB_RECURSE Core Core/*.cpp)
+file(GLOB_RECURSE RENDER core/rendering/*.cpp)
+file(GLOB_RECURSE Core core/*.cpp core/*/*.cpp)
 file(GLOB_RECURSE Lib Lib/*.cpp)
 
-add_executable(${PROJECT_NAME} main.cpp ${RENDER} ${IMGUI} vendor/stb_image/stb_image.cpp ${SHAPE} ${Editor} ${Core} ${Lib})
+file(GLOB_RECURSE World world/*.cpp)
+
+add_executable(${PROJECT_NAME} main.cpp ${RENDER} ${IMGUI} vendor/stb_image/stb_image.cpp ${SHAPE} ${Editor} ${Core} ${Lib} ${World})
 
 find_package(Git QUIET)
 if(GIT_FOUND AND EXISTS "${PROJECT_SOURCE_DIR}/.git")
@@ -44,8 +44,9 @@ include_directories("vendor/imgui")
 include_directories("vendor/stb_image")
 include_directories("test")
 include_directories(".")
-include_directories("Core/Shape")
-include_directories("Rendering")
+include_directories("core/")
+include_directories("core/shape")
+include_directories("core/rendering")
 # link_libraries(${GLEW_LIBRARIES})
 
 # target_include_directories(${PROJECT_NAME} 
